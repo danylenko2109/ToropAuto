@@ -80,12 +80,11 @@ const translations = {
         // Testimonials
         "testimonials-title": "Отзывы клиентов",
         "testimonials-subtitle": "Что говорят наши клиенты о качестве наших услуг",
-        "testimonial1": "Отличный сервис! Привезла свою Toyota на ТО, сделали все быстро и качественно. Персонал вежливый, цены адекватные. Теперь только сюда!",
-        "testimonial2": "Купил у них Honda CR-V, полностью доволен покупкой. Машина в отличном состоянии, всю документацию оформили быстро. Рекомендую!",
-        "testimonial3": "Делал капитальный ремонт двигателя на своем Ford. Работу выполнили качественно, в срок и по разумной цене. Спасибо специалистам Torop Auto!",
-        "testimonial1-owner": "Владелец Toyota Camry",
-        "testimonial2-owner": "Владелец Honda CR-V",
-        "testimonial3-owner": "Владелец Ford Focus",
+        "testimonial1-text": "Хочу выразить огромную благодарность за помощь в покупке автомобиля! Мне всё подробно объяснили, помогли с выбором и проверкой машины, оформили все документы и поддерживали на каждом этапе. Благодаря вам процесс прошёл легко и без лишнего стресса.",
+        "testimonial2-text": "Прекрасное обслуживание, быстро, качественно 👍👍👍👍",
+        "testimonial3-text": "Супер 👍🏻 очень мило, отличный сервис",
+        "view-on-maps": "Смотреть на Картах",
+        "month-ago": "месяц назад",
         
         // Contact
         "contact-title": "Свяжитесь с нами",
@@ -201,12 +200,11 @@ const translations = {
         // Testimonials
         "testimonials-title": "Kundenbewertungen",
         "testimonials-subtitle": "Was unsere Kunden über die Qualität unserer Dienstleistungen sagen",
-        "testimonial1": "Ausgezeichneter Service! Habe meinen Toyota zur Wartung gebracht, alles wurde schnell und qualitativ hochwertig erledigt. Das Personal ist höflich, die Preise angemessen. Jetzt nur noch hier!",
-        "testimonial2": "Habe bei ihnen einen Honda CR-V gekauft, vollkommen zufrieden mit dem Kauf. Das Auto ist in ausgezeichnetem Zustand, alle Dokumente wurden schnell bearbeitet. Empfehle es weiter!",
-        "testimonial3": "Habe eine Motorüberholung an meinem Ford durchführen lassen. Die Arbeit wurde qualitativ hochwertig, termingerecht und zu einem vernünftigen Preis durchgeführt. Vielen Dank an die Spezialisten von Torop Auto!",
-        "testimonial1-owner": "Besitzer Toyota Camry",
-        "testimonial2-owner": "Besitzer Honda CR-V",
-        "testimonial3-owner": "Besitzer Ford Focus",
+        "testimonial1-text": "Ich möchte mich ganz herzlich für die Hilfe beim Autokauf bedanken! Mir wurde alles genau erklärt, bei der Auswahl und Überprüfung des Autos geholfen, alle Dokumente wurden erledigt und ich wurde in jeder Phase unterstützt. Dank Ihnen verlief der Prozess einfach und ohne unnötigen Stress.",
+        "testimonial2-text": "Ausgezeichneter Service, schnell, qualitativ hochwertig 👍👍👍👍",
+        "testimonial3-text": "Super 👍🏻 sehr nett, exzellenter Service",
+        "view-on-maps": "Auf Maps ansehen",
+        "month-ago": "vor einem Monat",
         
         // Contact
         "contact-title": "Kontaktieren Sie uns",
@@ -322,12 +320,11 @@ const translations = {
         // Testimonials
         "testimonials-title": "Відгуки клієнтів",
         "testimonials-subtitle": "Що кажуть наші клієнти про якість наших послуг",
-        "testimonial1": "Відмінний сервіс! Привезла свою Toyota на ТО, зробили все швидко та якісно. Персонал ввічливий, ціни адекватні. Тепер тільки сюди!",
-        "testimonial2": "Купив у них Honda CR-V, повністю задоволений покупкою. Машина в відмінному стані, всю документацію оформили швидко. Рекомендую!",
-        "testimonial3": "Робив капітальний ремонт двигуна на своєму Ford. Роботу виконали якісно, в строк та за розумною ціною. Дякую фахівцям Torop Auto!",
-        "testimonial1-owner": "Власник Toyota Camry",
-        "testimonial2-owner": "Власник Honda CR-V",
-        "testimonial3-owner": "Власник Ford Focus",
+        "testimonial1-text": "Хочу висловити величезну вдячність за допомогу в покупці автомобіля! Мені все докладно пояснили, допомогли з вибором і перевіркою машини, оформили всі документи і підтримували на кожному етапі. Завдяки вам процес пройшов легко і без зайвого стресу.",
+        "testimonial2-text": "Чудове обслуговування, швидко, якісно 👍👍👍👍",
+        "testimonial3-text": "Супер 👍🏻 дуже мило, відмінний сервіс",
+        "view-on-maps": "Дивитися на Картах",
+        "month-ago": "місяць тому",
         
         // Contact
         "contact-title": "Зв'яжіться з нами",
@@ -437,22 +434,25 @@ const appData = {
     ],
     testimonials: [
         {
-            avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-            textKey: 'testimonial1',
-            name: 'Анна Иванова',
-            ownerKey: 'testimonial1-owner'
+            avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
+            textKey: 'testimonial1-text',
+            name: 'Катя Авраменко',
+            reviews: '4 отзыва',
+            rating: 5
         },
         {
-            avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-            textKey: 'testimonial2',
-            name: 'Дмитрий Петров',
-            ownerKey: 'testimonial2-owner'
+            avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
+            textKey: 'testimonial2-text',
+            name: 'Юлия Герман',
+            reviews: '2 отзыва',
+            rating: 5
         },
         {
-            avatar: 'https://randomuser.me/api/portraits/men/67.jpg',
-            textKey: 'testimonial3',
-            name: 'Сергей Козлов',
-            ownerKey: 'testimonial3-owner'
+            avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
+            textKey: 'testimonial3-text',
+            name: 'Luise',
+            reviews: '14 отзывов',
+            rating: 5
         }
     ],
     contactDetails: [
@@ -605,6 +605,9 @@ function renderDynamicContent() {
     if (testimonialsContainer) {
         testimonialsContainer.innerHTML = appData.testimonials.map((testimonial, index) => `
             <div class="testimonial-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${(index + 1) * 100}">
+                <div class="testimonial-rating">
+                    ${'<i class="bx bxs-star"></i>'.repeat(testimonial.rating)}
+                </div>
                 <div class="testimonial-text" data-lang="${testimonial.textKey}">
                     ${translations[currentLang][testimonial.textKey]}
                 </div>
@@ -614,8 +617,14 @@ function renderDynamicContent() {
                     </div>
                     <div class="author-info">
                         <h4>${testimonial.name}</h4>
-                        <p data-lang="${testimonial.ownerKey}">${translations[currentLang][testimonial.ownerKey]}</p>
+                        <p>${testimonial.reviews}</p>
                     </div>
+                </div>
+                <div class="testimonial-actions">
+                    <span class="testimonial-date" data-lang="month-ago">${translations[currentLang]['month-ago']}</span>
+                    <a href="#" class="testimonial-link" data-lang="view-on-maps">
+                        ${translations[currentLang]['view-on-maps']} <i class='bx bx-link-external'></i>
+                    </a>
                 </div>
             </div>
         `).join('');
@@ -722,25 +731,47 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Mobile menu toggle
+// Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
     const menuIcon = document.querySelector('.menu-icon');
     const navMenu = document.getElementById('navMenu');
+    const body = document.body;
     
     if (menuIcon && navMenu) {
-        menuIcon.addEventListener('click', function() {
+        menuIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
+            menuIcon.classList.toggle('active');
+            body.classList.toggle('menu-open');
         });
-    }
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu) {
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
+                menuIcon.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('nav') && !e.target.closest('.menu-icon')) {
+                navMenu.classList.remove('active');
+                menuIcon.classList.remove('active');
+                body.classList.remove('menu-open');
             }
         });
-    });
+        
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                navMenu.classList.remove('active');
+                menuIcon.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
+    }
 });
 
 // Language switcher functionality
@@ -758,6 +789,9 @@ document.addEventListener('DOMContentLoaded', function() {
             option.addEventListener('click', function() {
                 const lang = this.getAttribute('data-lang');
                 changeLanguage(lang);
+                
+                // Save language preference
+                localStorage.setItem('preferred-language', lang);
             });
         });
         
@@ -830,19 +864,14 @@ if (statsSection) {
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', function() {
+    // Load saved language preference
+    const savedLang = localStorage.getItem('preferred-language');
+    if (savedLang && translations[savedLang]) {
+        currentLang = savedLang;
+    }
+    
     // Set initial language
     changeLanguage(currentLang);
-    
-    // Hide loading screen
-    setTimeout(() => {
-        const loadingScreen = document.getElementById('loadingScreen');
-        if (loadingScreen) {
-            loadingScreen.style.opacity = '0';
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        }
-    }, 1000);
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -857,4 +886,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Prevent horizontal scroll
+    function preventHorizontalScroll() {
+        document.body.style.overflowX = 'hidden';
+    }
+    
+    preventHorizontalScroll();
+    window.addEventListener('resize', preventHorizontalScroll);
 });

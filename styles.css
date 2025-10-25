@@ -42,6 +42,11 @@
     --space-2xl: 4rem;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     color: var(--text-light);
     overflow-x: hidden;
@@ -49,6 +54,8 @@ body {
     scroll-behavior: smooth;
     line-height: 1.6;
     font-size: 16px;
+    width: 100%;
+    position: relative;
 }
 
 .container {
@@ -58,12 +65,13 @@ body {
     padding: 0 var(--space-sm);
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 /* ========== HEADER & NAVIGATION ========== */
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: var(--space-md) 0;
     position: fixed;
@@ -90,22 +98,15 @@ header.scrolled {
     gap: var(--space-sm);
     transition: transform 0.3s var(--ease-out);
     padding: var(--space-xs);
+    z-index: 1001;
 }
 
 .logo:hover {
     transform: scale(1.05);
 }
 
-.logo-placeholder {
-    width: 50px;
-    height: 50px;
-    background: var(--gradient-1);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: white;
+.logo img {
+    border-radius: 8px;
 }
 
 .logo h2 {
@@ -126,6 +127,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     gap: var(--space-md);
+    position: relative;
 }
 
 .menu-icon {
@@ -143,6 +145,7 @@ header.scrolled {
     width: 44px;
     height: 44px;
     display: none;
+    z-index: 1001;
 }
 
 .menu-icon:hover {
@@ -151,10 +154,20 @@ header.scrolled {
     transform: rotate(90deg);
 }
 
+.menu-icon.active {
+    transform: rotate(90deg);
+}
+
+nav {
+    position: relative;
+}
+
 nav ul {
     display: flex;
     gap: var(--space-md);
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul.active {
@@ -323,6 +336,7 @@ nav a:hover::after {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .hero::before {
@@ -493,6 +507,7 @@ nav a:hover::after {
     background: var(--card-bg);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .stats-container {
@@ -551,11 +566,13 @@ nav a:hover::after {
 .services {
     padding: var(--space-2xl) 0;
     position: relative;
+    width: 100%;
 }
 
 .section-title {
     text-align: center;
     margin-bottom: var(--space-2xl);
+    width: 100%;
 }
 
 .section-title h2 {
@@ -596,6 +613,7 @@ nav a:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: var(--space-lg);
+    width: 100%;
 }
 
 .service-card {
@@ -715,6 +733,7 @@ nav a:hover::after {
     background: var(--card-bg);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .about-content {
@@ -723,6 +742,7 @@ nav a:hover::after {
     gap: var(--space-xl);
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 
 .about-image {
@@ -781,6 +801,7 @@ nav a:hover::after {
     flex-wrap: wrap;
     gap: var(--space-sm);
     margin-top: var(--space-lg);
+    width: 100%;
 }
 
 .feature {
@@ -812,6 +833,7 @@ nav a:hover::after {
 .cars {
     padding: var(--space-2xl) 0;
     position: relative;
+    width: 100%;
 }
 
 .cars-grid {
@@ -819,6 +841,7 @@ nav a:hover::after {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: var(--space-lg);
     margin-bottom: var(--space-xl);
+    width: 100%;
 }
 
 .car-card {
@@ -935,6 +958,7 @@ nav a:hover::after {
     margin-top: var(--space-xl);
     border: 1px solid var(--border-color);
     text-align: center;
+    width: 100%;
 }
 
 .external-platforms h3 {
@@ -957,6 +981,7 @@ nav a:hover::after {
     gap: var(--space-md);
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .platform-btn {
@@ -992,6 +1017,7 @@ nav a:hover::after {
     background: var(--background);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .testimonials-container {
@@ -1000,6 +1026,7 @@ nav a:hover::after {
     gap: var(--space-lg);
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 
 .testimonial-card {
@@ -1064,15 +1091,56 @@ nav a:hover::after {
     font-size: 0.875rem;
 }
 
+.testimonial-rating {
+    display: flex;
+    gap: 2px;
+    margin-bottom: var(--space-sm);
+}
+
+.testimonial-rating i {
+    color: #ffc107;
+    font-size: 1rem;
+}
+
+.testimonial-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--border-light);
+}
+
+.testimonial-date {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.testimonial-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    transition: all 0.3s var(--ease-out);
+}
+
+.testimonial-link:hover {
+    gap: var(--space-sm);
+}
+
 /* ========== CONTACT SECTION ========== */
 .contact {
     padding: var(--space-2xl) 0;
     position: relative;
+    width: 100%;
 }
 
 .contact-content {
     display: flex;
     gap: var(--space-xl);
+    width: 100%;
 }
 
 .contact-info {
@@ -1114,6 +1182,7 @@ nav a:hover::after {
     flex-direction: column;
     gap: var(--space-sm);
     margin-bottom: var(--space-xl);
+    width: 100%;
 }
 
 .contact-detail {
@@ -1213,6 +1282,7 @@ footer {
     padding: var(--space-2xl) 0 var(--space-lg);
     border-top: 1px solid var(--border-color);
     position: relative;
+    width: 100%;
 }
 
 .footer-content {
@@ -1222,6 +1292,7 @@ footer {
     position: relative;
     z-index: 2;
     gap: var(--space-xl);
+    width: 100%;
 }
 
 .footer-column {
@@ -1311,6 +1382,7 @@ footer {
     font-size: 0.875rem;
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 
 /* ========== SCROLL TO TOP BUTTON ========== */
@@ -1461,6 +1533,12 @@ footer {
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+}
+
 @media (max-width: 991px) {
     .hero {
         flex-direction: column;
@@ -1506,17 +1584,20 @@ footer {
     
     nav ul {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(0, 0, 0, 0.98);
         flex-direction: column;
-        padding: var(--space-md);
-        gap: var(--space-sm);
+        padding: var(--space-xl) var(--space-md);
+        gap: var(--space-md);
         box-shadow: var(--shadow-xl);
         backdrop-filter: blur(20px);
         border-top: 1px solid var(--border-color);
+        z-index: 999;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
     }
     
     nav ul.active {
@@ -1526,15 +1607,25 @@ footer {
     nav a {
         width: 100%;
         text-align: center;
-        padding: var(--space-sm) 0;
+        padding: var(--space-md) 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid var(--border-light);
     }
-}
-
-@media (max-width: 767px) {
+    
+    nav a:last-child {
+        border-bottom: none;
+    }
+    
     .contact-header {
         display: none;
     }
     
+    .language-btn span {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
     .hero-content h1 {
         font-size: clamp(2rem, 5vw, 2.5rem);
     }
@@ -1565,8 +1656,14 @@ footer {
         flex: 1 1 100%;
     }
     
-    .language-btn span {
-        display: none;
+    .testimonial-actions {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1617,10 +1714,26 @@ footer {
         font-size: 1.5rem;
     }
     
-    .logo-placeholder {
+    .logo img {
         width: 40px;
-        height: 40px;
-        font-size: 1.25rem;
+    }
+    
+    .language-btn {
+        padding: var(--space-sm);
+    }
+    
+    .language-btn span {
+        display: none;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-sm);
+    }
+    
+    .author-info {
+        text-align: center;
     }
 }
 
@@ -1657,4 +1770,15 @@ footer {
 *:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+/* Prevent horizontal scroll */
+body, html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
 }
