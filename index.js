@@ -63,12 +63,12 @@ const translations = {
         "car-badge1": "Новинка",
         "car-badge2": "Хит продаж",
         "car-badge3": "Скидка 10%",
-        "car1-text": "Комфортный и надежный седан с экономичным двигателем и современным оснащением. Идеален для города и дальних поездок.",
-        "car2-text": "Просторный кроссовер с полным приводом, идеальный для семьи и путешествий. Большой багажник и экономичный расход.",
-        "car3-text": "Мощный внедорожник с просторным салоном и передовыми технологиями безопасности. Отличный выбор для большой семьи.",
-        "fuel-type": "Бензин",
-        "transmission": "Автомат",
-        "seats": "5 мест",
+        "car1-text": "Hyundai i30 Facelift с надежным 1.6-литровым дизельным двигателем и автоматической коробкой передач. Идеальное состояние, новый TÜV до апреля 2026 года. Комплект 'без забот' с топовой комплектацией.",
+        "car2-text": "BMW 330i Limousine (G20) 2019 года выпуска с мощным 2.0-литровым бензиновым двигателем 258 л.с. Спортивный бизнес-седан с автоматической коробкой передач, в отличном техническом состоянии. Соответствует стандарту EURO 6.",
+        "car3-text": "Ford B-Max 1.0 EcoBoost 2013 года с пробегом 108 700 км. Экономичный бензиновый двигатель (около 5л/100км), новый TÜV до июля 2027. Ухоженный автомобиль без аварий, некурящий владелец, почти новые шины.",
+        "fuel-type": "Топливо",
+        "transmission": "Коробка",
+        "seats": "Места",
         "car-btn": "Узнать больше",
         
         // Platforms
@@ -183,12 +183,12 @@ const translations = {
         "car-badge1": "Neu",
         "car-badge2": "Bestseller",
         "car-badge3": "10% Rabatt",
-        "car1-text": "Komfortable und zuverlässige Limousine mit sparsamem Motor und moderner Ausstattung. Ideal für Stadt und lange Fahrten.",
-        "car2-text": "Geräumiger SUV mit Allradantrieb, ideal für Familie und Reisen. Großer Kofferraum und sparsamer Verbrauch.",
-        "car3-text": "Leistungsstarker Geländewagen mit geräumigem Innenraum und modernster Sicherheitstechnik. Perfekte Wahl für große Familien.",
-        "fuel-type": "Benzin",
-        "transmission": "Automatik",
-        "seats": "5 Sitze",
+        "car1-text": "Hyundai i30 Facelift mit zuverlässigem 1.6-Liter Diesel-Motor und Automatikgetriebe. Top gepflegt, neuer TÜV bis April 2026. Sorglos-Paket mit Top-Ausstattung für komfortables Fahren.",
+        "car2-text": "BMW 330i Limousine (G20) Baujahr 2019 mit leistungsstarkem 2.0-Liter Benzin-Motor (258 PS). Sportliche Business-Limousine mit Automatikgetriebe, ausgezeichnetem technischen Zustand. Erfüllt EURO 6 Norm.",
+        "car3-text": "Ford B-Max 1.0 EcoBoost Baujahr 2013 mit 108.700 km Laufleistung. Sparsamer Benzin-Motor (ca. 5l/100km), neuer TÜV bis Juli 2027. Unfallfrei gepflegt, Nichtraucherfahrzeug mit fast neuen Reifen.",
+        "fuel-type": "Kraftstoff",
+        "transmission": "Getriebe",
+        "seats": "Sitze",
         "car-btn": "Mehr erfahren",
         
         // Platforms
@@ -303,12 +303,12 @@ const translations = {
         "car-badge1": "Новинка",
         "car-badge2": "Хіт продажів",
         "car-badge3": "Знижка 10%",
-        "car1-text": "Комфортний та надійний седан з економічним двигуном та сучасним оснащенням. Ідеальний для міста та далеких поїздок.",
-        "car2-text": "Просторий кросовер з повним приводом, ідеальний для сім'ї та подорожей. Великий багажник та економічна витрата.",
-        "car3-text": "Потужний позашляховик з просторим салоном та передовими технологіями безпеки. Відмінний вибір для великої сім'ї.",
-        "fuel-type": "Бензин",
-        "transmission": "Автомат",
-        "seats": "5 місць",
+        "car1-text": "Hyundai i30 Facelift з надійним 1.6-літровим дизельним двигуном та автоматичною коробкою передач. Ідеальний стан, новий TÜV до квітня 2026 року. Комплект 'без турбот' з топовою комплектацією для комфортної їзди.",
+        "car2-text": "BMW 330i Limousine (G20) 2019 року випуску з потужним 2.0-літровим бензиновим двигуном 258 к.с. Спортивний бізнес-седан з автоматичною коробкою передач, у відмінному технічному стані. Відповідає стандарту EURO 6.",
+        "car3-text": "Ford B-Max 1.0 EcoBoost 2013 року з пробігом 108 700 км. Економний бензиновий двигун (близько 5л/100км), новий TÜV до липня 2027. Доглянутий автомобіль без аварій, непалений салон, майже нові шини.",
+        "fuel-type": "Паливо",
+        "transmission": "Коробка",
+        "seats": "Місця",
         "car-btn": "Дізнатися більше",
         
         // Platforms
@@ -411,25 +411,34 @@ const appData = {
     ],
     cars: [
         {
-            image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'images/pic3.jpg',
             badgeKey: 'car-badge1',
-            title: 'Toyota Camry 2022',
+            title: 'Hyundai i30 1.6 CRDi Automatik',
             textKey: 'car1-text',
-            price: '$25,000'
+           
+            fuel: 'Diesel',
+            transmission: 'Automatik',
+            seats: '5 Sitze'
         },
         {
-            image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'images/pic4.jpg',
             badgeKey: 'car-badge2',
-            title: 'Honda CR-V 2021',
+            title: 'BMW 330i Limousine (G20)',
             textKey: 'car2-text',
-            price: '$28,500'
+       
+            fuel: 'Benzin',
+            transmission: 'Automatik',
+            seats: '5 Sitze'
         },
         {
-            image: 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'images/pic5.jpg',
             badgeKey: 'car-badge3',
-            title: 'Ford Explorer 2020',
+            title: 'Ford B-Max 1.0 EcoBoost',
             textKey: 'car3-text',
-            price: '$32,000'
+           
+            fuel: 'Benzin',
+            transmission: 'Manuell',
+            seats: '5 Sitze'
         }
     ],
     testimonials: [
@@ -574,7 +583,7 @@ function renderDynamicContent() {
             <div class="car-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${(index + 1) * 100}">
                 <div class="car-image">
                     <img src="${car.image}" alt="${car.title}">
-                    <div class="car-badge" data-lang="${car.badgeKey}">${translations[currentLang][car.badgeKey]}</div>
+                    
                 </div>
                 <div class="car-info">
                     <h3>${car.title}</h3>
@@ -582,18 +591,18 @@ function renderDynamicContent() {
                     <div class="car-features">
                         <div class="car-feature">
                             <i class='bx bxs-gas-pump'></i>
-                            <span data-lang="fuel-type">${translations[currentLang]['fuel-type']}</span>
+                            <span>${car.fuel}</span>
                         </div>
                         <div class="car-feature">
                             <i class='bx bxs-car'></i>
-                            <span data-lang="transmission">${translations[currentLang]['transmission']}</span>
+                            <span>${car.transmission}</span>
                         </div>
                         <div class="car-feature">
                             <i class='bx bx-user'></i>
-                            <span data-lang="seats">${translations[currentLang]['seats']}</span>
+                            <span>${car.seats}</span>
                         </div>
                     </div>
-                    <div class="car-price">${car.price}</div>
+                
                     <a href="#contact" class="btn btn-primary" data-lang="car-btn">${translations[currentLang]['car-btn']}</a>
                 </div>
             </div>
@@ -688,8 +697,7 @@ function renderDynamicContent() {
                 <div class="social-links">
                     <a href="#"><i class='bx bxl-facebook'></i></a>
                     <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    
                 </div>
             </div>
             ${appData.footerLinks.map(column => `
