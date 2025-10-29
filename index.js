@@ -903,3 +903,44 @@ document.addEventListener('DOMContentLoaded', function() {
     preventHorizontalScroll();
     window.addEventListener('resize', preventHorizontalScroll);
 });
+
+
+// Header hide/show on scroll
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+function updateHeader() {
+    const header = document.querySelector('header');
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > 100) { // Минимальная прокрутка перед началом анимации
+        if (currentScrollY > lastScrollY) {
+            // Скролл вниз - скрываем хедер
+            header.style.transform = 'translateY(-100%)';
+            header.style.opacity = '0';
+        } else {
+            // Скролл вверх - показываем хедер
+            header.style.transform = 'translateY(0)';
+            header.style.opacity = '1';
+        }
+    } else {
+        // Вверху страницы - всегда показываем хедер
+        header.style.transform = 'translateY(0)';
+        header.style.opacity = '1';
+    }
+    
+    lastScrollY = currentScrollY;
+    ticking = false;
+}
+
+function requestTick() {
+    if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+    }
+}
+
+window.addEventListener('scroll', requestTick);
+
+// Также обновляем хедер при загрузке страницы
+window.addEventListener('load', updateHeader);
