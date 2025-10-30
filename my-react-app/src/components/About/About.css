@@ -1,0 +1,109 @@
+/* ========== ABOUT SECTION ========== */
+.about {
+    padding: var(--space-2xl) 0;
+    background: var(--card-bg);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--border-light);
+    transition: transform 0.4s var(--ease-out);
+}
+
+.about-image:hover img {
+    transform: scale(1.02) rotate(1deg);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--space-lg);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff 0%, var(--text-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.about-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-2);
+    border-radius: 2px;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+    font-size: 1.0625rem;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+    width: 100%;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    width: 100%;
+    padding: var(--space-md);
+    border-radius: 12px;
+    transition: all 0.3s var(--ease-out);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid transparent;
+}
+
+.feature:hover {
+    background: rgba(76, 192, 231, 0.1);
+    border-color: var(--primary-color);
+    transform: translateX(8px);
+}
+
+.feature i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    width: 24px;
+    flex-shrink: 0;
+}
+
+/* ========== RESPONSIVE ABOUT ========== */
+@media (max-width: 991px) {
+    .about-content {
+        flex-direction: column;
+        gap: var(--space-xl);
+    }
+}

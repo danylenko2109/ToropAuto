@@ -1,3 +1,7 @@
+// Telegram Bot Configuration
+const TELEGRAM_BOT_TOKEN = '7945231022:AAGrXt1RlU0X2gmRCUEk3pOJTNrE7p0oaYE'; // Замените на ваш токен бота
+const TELEGRAM_CHAT_ID = '913725325'; // Замените на ваш chat ID
+
 // Initialize AOS
 AOS.init({
     duration: 1000,
@@ -77,6 +81,11 @@ const translations = {
         "platform-kleinanzeigen": "Kleinanzeigen",
         "platform-mobile": "mobile.de",
         
+        // Modal
+        "modal-title": "Скоро будет доступно",
+        "modal-text": "В настоящее время страница на mobile.de находится в разработке. Скоро здесь появятся наши автомобили!",
+        "modal-close": "Закрыть",
+        
         // Testimonials
         "testimonials-title": "Отзывы клиентов",
         "testimonials-subtitle": "Что говорят наши клиенты о качестве наших услуг",
@@ -96,7 +105,7 @@ const translations = {
         "phone-title": "Телефон",
         "email-title": "Email",
         "hours-title": "Часы работы",
-        "hours-text": "Пн-Пт: 9:00 - 19:00<br>Сб: 10:00 - 17:00<br>Вс: выходной",
+        "hours-text": "Пн-Пт: 9:00 - 17:00<br>Сб: 9:00 - 15:00<br>Вс: выходной",
         
         // Form
         "form-name": "Ваше имя",
@@ -110,9 +119,11 @@ const translations = {
         "form-subject4": "Другое",
         "form-message": "Сообщение",
         "form-submit": "Отправить сообщение",
+        "form-success": "Сообщение отправлено! Мы свяжемся с вами в ближайшее время.",
+        "form-error": "Произошла ошибка. Пожалуйста, попробуйте еще раз.",
         
         // Footer
-        "footer-about": "Профессиональный автосервис и продажа автомобилей. Мы гарантируем качество, надежность и индивидуальный подход к каждому клиенту. Более 15 лет на рынке автомобильных услуг.",
+        "footer-about": "Профессиональный автосервис и продажа автомобилей. Мы гарантируем качество, надежность и индивидуальный подход к каждому клиенту. Более 13 лет на рынке автомобильных услуг.",
         "footer-services-title": "Наши услуги",
         "footer-service1": "Техническое обслуживание",
         "footer-service2": "Ремонт двигателя",
@@ -125,7 +136,54 @@ const translations = {
         "footer-rights": "Все права защищены.",
         
         // Loading
-        "loading-text": "Загрузка..."
+        "loading-text": "Загрузка...",
+
+        // Header новые
+        "faq": "Вопросы",
+        
+        // Hero новые
+        "hero-feature1": "Гарантия качества",
+        "hero-feature2": "Быстрое обслуживание", 
+        "hero-feature3": "Доступные цены",
+        "hero-badge-text": "Лучший автосервис 2024",
+        "contact-btn": "Бесплатная консультация",
+        
+        // Process
+        "process-title": "Как мы работаем",
+        "process-subtitle": "Прозрачный процесс работы от заявки до результата",
+        "process-step1-title": "Консультация",
+        "process-step1-text": "Вы оставляете заявку, мы связываемся с вами и уточняем детали",
+        "process-step2-title": "Диагностика", 
+        "process-step2-text": "Проводим полную диагностику и составляем смету",
+        "process-step3-title": "Ремонт",
+        "process-step3-text": "Выполняем работы с использованием качественных запчастей",
+        "process-step4-title": "Результат",
+        "process-step4-text": "Вы получаете готовый результат с гарантией качества",
+        
+        // About
+        "experience-text": "лет успешной работы",
+        
+        // FAQ
+        "faq-title": "Часто задаваемые вопросы",
+        "faq-subtitle": "Ответы на самые популярные вопросы о наших услугах",
+        "faq1-question": "Как быстро вы можете отремонтировать мой автомобиль?",
+        "faq1-answer": "Сроки ремонта зависят от сложности работ. Обычно диагностика занимает 1-2 часа, мелкий ремонт - 1-2 дня, капитальный ремонт - 3-7 дней. Мы всегда стараемся минимизировать время простоя вашего автомобиля.",
+        "faq2-question": "Даете ли вы гарантию на ремонт?",
+        "faq2-answer": "Да, мы предоставляем гарантию на все виды работ и установленные запчасти. Гарантийный срок зависит от типа ремонта и составляет от 6 месяцев до 2 лет.",
+        "faq3-question": "Можете ли вы помочь с покупкой автомобиля в Германии?",
+        "faq3-answer": "Конечно! Мы предлагаем полное сопровождение при покупке автомобиля: подбор вариантов, проверка истории, техническая диагностика, оформление документов и помощь с регистрацией.",
+        "faq4-question": "Работаете ли вы с конкретными марками автомобилей?",
+        "faq4-answer": "Мы работаем со всеми марками автомобилей: от Volkswagen, BMW, Mercedes до Audi, Opel, Ford и других. Наши специалисты имеют опыт работы с различными брендами.",
+        
+        // CTA
+        "cta-title": "Готовы начать сотрудничество?",
+        "cta-text": "Свяжитесь с нами сегодня и получите бесплатную консультацию по вашему автомобилю",
+        "cta-btn-primary": "Получить консультацию",
+        "cta-btn-phone": "Позвонить сейчас",
+        
+        // Contact
+        "social-title": "Мы в соцсетях",
+        "contact-modal-title": "Свяжитесь с нами"
     },
     de: {
         // Header
@@ -197,6 +255,11 @@ const translations = {
         "platform-kleinanzeigen": "Kleinanzeigen",
         "platform-mobile": "mobile.de",
         
+        // Modal
+        "modal-title": "Demnächst verfügbar",
+        "modal-text": "Die mobile.de-Seite befindet sich derzeit in Entwicklung. Bald werden hier unsere Autos erscheinen!",
+        "modal-close": "Schließen",
+        
         // Testimonials
         "testimonials-title": "Kundenbewertungen",
         "testimonials-subtitle": "Was unsere Kunden über die Qualität unserer Dienstleistungen sagen",
@@ -216,7 +279,7 @@ const translations = {
         "phone-title": "Telefon",
         "email-title": "E-Mail",
         "hours-title": "Öffnungszeiten",
-        "hours-text": "Mo-Fr: 9:00 - 19:00<br>Sa: 10:00 - 17:00<br>So: geschlossen",
+        "hours-text": "Mo-Fr: 9:00 - 19:00<br>Sa: 9:00 - 15:00<br>So: geschlossen",
         
         // Form
         "form-name": "Ihr Name",
@@ -230,9 +293,11 @@ const translations = {
         "form-subject4": "Anderes",
         "form-message": "Nachricht",
         "form-submit": "Nachricht senden",
+        "form-success": "Nachricht gesendet! Wir werden uns in Kürze bei Ihnen melden.",
+        "form-error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
         
         // Footer
-        "footer-about": "Professionelle Autowerkstatt und Autoverkauf. Wir garantieren Qualität, Zuverlässigkeit und individuelle Betreuung für jeden Kunden. Über 15 Jahre Erfahrung im Automobilservice.",
+        "footer-about": "Professionelle Autowerkstatt und Autoverkauf. Wir garantieren Qualität, Zuverlässigkeit und individuelle Betreuung für jeden Kunden. Über 13 Jahre Erfahrung im Automobilservice.",
         "footer-services-title": "Unsere Dienstleistungen",
         "footer-service1": "Wartung",
         "footer-service2": "Motorreparatur",
@@ -241,11 +306,57 @@ const translations = {
         "footer-service5": "Autoverkauf",
         "footer-contact-title": "Kontakte",
         "footer-address": "Hohlstraße 43, 55743 Idar-Oberstein",
-        "footer-hours": "Mo-Fr: 9:00 - 19:00",
+        "footer-hours": "Mo-Fr: 9:00 - 17:00, Samstag: 9:00-15:00 Uhr",
         "footer-rights": "Alle Rechte vorbehalten.",
         
         // Loading
-        "loading-text": "Laden..."
+        "loading-text": "Laden...",
+
+        "faq": "FAQ",
+        
+        // Hero новые
+        "hero-feature1": "Qualitätsgarantie",
+        "hero-feature2": "Schneller Service", 
+        "hero-feature3": "Erschwingliche Preise",
+        "hero-badge-text": "Beste Autowerkstatt 2024",
+        "contact-btn": "Kostenlose Beratung",
+        
+        // Process
+        "process-title": "So arbeiten wir",
+        "process-subtitle": "Transparenter Arbeitsprozess von der Anfrage bis zum Ergebnis",
+        "process-step1-title": "Beratung",
+        "process-step1-text": "Sie stellen eine Anfrage, wir kontaktieren Sie und klären die Details",
+        "process-step2-title": "Diagnose", 
+        "process-step2-text": "Wir führen eine vollständige Diagnose durch und erstellen einen Kostenvoranschlag",
+        "process-step3-title": "Reparatur",
+        "process-step3-text": "Wir führen Arbeiten mit hochwertigen Ersatzteilen durch",
+        "process-step4-title": "Ergebnis",
+        "process-step4-text": "Sie erhalten ein fertiges Ergebnis mit Qualitätsgarantie",
+        
+        // About
+        "experience-text": "Jahre erfolgreiche Arbeit",
+        
+        // FAQ
+        "faq-title": "Häufig gestellte Fragen",
+        "faq-subtitle": "Antworten auf die häufigsten Fragen zu unseren Dienstleistungen",
+        "faq1-question": "Wie schnell können Sie mein Auto reparieren?",
+        "faq1-answer": "Die Reparaturzeiten hängen von der Komplexität der Arbeiten ab. Normalerweise dauert die Diagnose 1-2 Stunden, kleine Reparaturen 1-2 Tage, Generalüberholungen 3-7 Tage. Wir versuchen immer, die Standzeit Ihres Fahrzeugs zu minimieren.",
+        "faq2-question": "Geben Sie Garantie auf die Reparatur?",
+        "faq2-answer": "Ja, wir gewähren Garantie auf alle Arten von Arbeiten und eingebaute Ersatzteile. Die Garantiedauer hängt von der Art der Reparatur ab und beträgt 6 Monate bis 2 Jahre.",
+        "faq3-question": "Können Sie beim Autokauf in Deutschland helfen?",
+        "faq3-answer": "Natürlich! Wir bieten vollständige Begleitung beim Autokauf: Auswahl von Optionen, Überprüfung der Historie, technische Diagnose, Bearbeitung von Dokumenten und Hilfe bei der Zulassung.",
+        "faq4-question": "Arbeiten Sie mit bestimmten Automarken?",
+        "faq4-answer": "Wir arbeiten mit allen Automarken: von Volkswagen, BMW, Mercedes bis Audi, Opel, Ford und anderen. Unsere Spezialisten haben Erfahrung mit verschiedenen Marken.",
+        
+        // CTA
+        "cta-title": "Bereit für die Zusammenarbeit?",
+        "cta-text": "Kontaktieren Sie uns noch heute und erhalten Sie eine kostenlose Beratung für Ihr Auto",
+        "cta-btn-primary": "Beratung erhalten",
+        "cta-btn-phone": "Jetzt anrufen",
+        
+        // Contact
+        "social-title": "Wir in sozialen Medien",
+        "contact-modal-title": "Kontaktieren Sie uns"
     },
     uk: {
         // Header
@@ -317,6 +428,11 @@ const translations = {
         "platform-kleinanzeigen": "Kleinanzeigen",
         "platform-mobile": "mobile.de",
         
+        // Modal
+        "modal-title": "Скоро буде доступно",
+        "modal-text": "Наразі сторінка на mobile.de знаходиться в розробці. Незабаром тут з'являться наші автомобілі!",
+        "modal-close": "Закрити",
+        
         // Testimonials
         "testimonials-title": "Відгуки клієнтів",
         "testimonials-subtitle": "Що кажуть наші клієнти про якість наших послуг",
@@ -336,7 +452,7 @@ const translations = {
         "phone-title": "Телефон",
         "email-title": "Email",
         "hours-title": "Години роботи",
-        "hours-text": "Пн-Пт: 9:00 - 19:00<br>Сб: 10:00 - 17:00<br>Нд: вихідний",
+        "hours-text": "Пн-Пт: 9:00 - 17:00<br>Сб: 9:00 - 15:00<br>Нд: вихідний",
         
         // Form
         "form-name": "Ваше ім'я",
@@ -350,9 +466,11 @@ const translations = {
         "form-subject4": "Інше",
         "form-message": "Повідомлення",
         "form-submit": "Надіслати повідомлення",
+        "form-success": "Повідомлення відправлено! Ми зв'яжемося з вами найближчим часом.",
+        "form-error": "Сталася помилка. Будь ласка, спробуйте ще раз.",
         
         // Footer
-        "footer-about": "Професійний автосервіс та продаж автомобілів. Ми гарантуємо якість, надійність та індивідуальний підхід до кожного клієнта. Понад 15 років на ринку автомобільних послуг.",
+        "footer-about": "Професійний автосервіс та продаж автомобілів. Ми гарантуємо якість, надійність та індивідуальний підхід до кожного клієнта. Понад 13 років на ринку автомобільних послуг.",
         "footer-services-title": "Наші послуги",
         "footer-service1": "Технічне обслуговування",
         "footer-service2": "Ремонт двигуна",
@@ -365,12 +483,58 @@ const translations = {
         "footer-rights": "Всі права захищені.",
         
         // Loading
-        "loading-text": "Завантаження..."
+        "loading-text": "Завантаження...",
+
+         "faq": "Питання",
+        
+        // Hero новые
+        "hero-feature1": "Гарантія якості",
+        "hero-feature2": "Швидке обслуговування", 
+        "hero-feature3": "Доступні ціни",
+        "hero-badge-text": "Найкращий автосервіс 2024",
+        "contact-btn": "Безкоштовна консультація",
+        
+        // Process
+        "process-title": "Як ми працюємо",
+        "process-subtitle": "Прозорий процес роботи від заявки до результату",
+        "process-step1-title": "Консультація",
+        "process-step1-text": "Ви залишаєте заявку, ми зв'язуємося з вами та уточнюємо деталі",
+        "process-step2-title": "Діагностика", 
+        "process-step2-text": "Проводимо повну діагностику та складаємо кошторис",
+        "process-step3-title": "Ремонт",
+        "process-step3-text": "Виконуємо роботи з використанням якісних запчастин",
+        "process-step4-title": "Результат",
+        "process-step4-text": "Ви отримуєте готовий результат з гарантією якості",
+        
+        // About
+        "experience-text": "років успішної роботи",
+        
+        // FAQ
+        "faq-title": "Часті запитання",
+        "faq-subtitle": "Відповіді на найпопулярніші питання про наші послуги",
+        "faq1-question": "Як швидко ви можете відремонтувати мій автомобіль?",
+        "faq1-answer": "Терміни ремонту залежать від складності робіт. Зазвичай діагностика займає 1-2 години, дрібний ремонт - 1-2 дні, капітальний ремонт - 3-7 днів. Ми завжди намагаємося мінімізувати час простою вашого автомобіля.",
+        "faq2-question": "Чи даєте ви гарантію на ремонт?",
+        "faq2-answer": "Так, ми надаємо гарантію на всі види робіт та встановлені запчастини. Гарантійний термін залежить від типу ремонту та становить від 6 місяців до 2 років.",
+        "faq3-question": "Чи можете ви допомогти з покупкою автомобіля в Німеччині?",
+        "faq3-answer": "Звичайно! Ми пропонуємо повний супровід при покупці автомобіля: підбір варіантів, перевірка історії, технічна діагностика, оформлення документів та допомога з реєстрацією.",
+        "faq4-question": "Чи працюєте ви з конкретними марками автомобілів?",
+        "faq4-answer": "Ми працюємо з усіма марками автомобілів: від Volkswagen, BMW, Mercedes до Audi, Opel, Ford та інших. Наші фахівці мають досвід роботи з різними брендами.",
+        
+        // CTA
+        "cta-title": "Готові почати співпрацю?",
+        "cta-text": "Зв'яжіться з нами сьогодні та отримайте безкоштовну консультацію щодо вашого автомобіля",
+        "cta-btn-primary": "Отримати консультацію",
+        "cta-btn-phone": "Зателефонувати зараз",
+        
+        // Contact
+        "social-title": "Ми в соцмережах",
+        "contact-modal-title": "Зв'яжіться з нами"
     }
 };
 
 // Current language
-let currentLang = 'ru';
+let currentLang = 'de';
 
 // Application data
 const appData = {
@@ -415,7 +579,6 @@ const appData = {
             badgeKey: 'car-badge1',
             title: 'Hyundai i30 1.6 CRDi Automatik',
             textKey: 'car1-text',
-           
             fuel: 'Diesel',
             transmission: 'Automatik',
             seats: '5 Sitze'
@@ -425,7 +588,6 @@ const appData = {
             badgeKey: 'car-badge2',
             title: 'BMW 330i Limousine (G20)',
             textKey: 'car2-text',
-       
             fuel: 'Benzin',
             transmission: 'Automatik',
             seats: '5 Sitze'
@@ -435,7 +597,6 @@ const appData = {
             badgeKey: 'car-badge3',
             title: 'Ford B-Max 1.0 EcoBoost',
             textKey: 'car3-text',
-           
             fuel: 'Benzin',
             transmission: 'Manuell',
             seats: '5 Sitze'
@@ -443,24 +604,24 @@ const appData = {
     ],
     testimonials: [
         {
-            avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
+            avatar: 'https://avatar.iran.liara.run/public/93',
             textKey: 'testimonial1-text',
-            name: 'Катя Авраменко',
-            reviews: '4 отзыва',
+            name: 'Katya Avramenko',
+            reviews: 'from Google Maps',
             rating: 5
         },
         {
-            avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
+            avatar: 'https://avatar.iran.liara.run/public/girl',
             textKey: 'testimonial2-text',
-            name: 'Юлия Герман',
-            reviews: '2 отзыва',
+            name: 'Yulia German',
+            reviews: 'from Google Maps',
             rating: 5
         },
         {
-            avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
+            avatar: 'https://avatar.iran.liara.run/public/96',
             textKey: 'testimonial3-text',
             name: 'Luise',
-            reviews: '14 отзывов',
+            reviews: 'from Google Maps',
             rating: 5
         }
     ],
@@ -473,7 +634,7 @@ const appData = {
         {
             icon: 'bx bx-phone',
             titleKey: 'phone-title',
-            text: '+49 6781 1234567'
+            text: '+49 151 46327 317'
         },
         {
             icon: 'bx bx-envelope',
@@ -501,8 +662,8 @@ const appData = {
             titleKey: 'footer-contact-title',
             links: [
                 { icon: 'bx bx-map', textKey: 'footer-address' },
-                { icon: 'bx bx-phone', text: '+49 6781 1234567' },
-                { icon: 'bx bx-envelope', text: 'info@toropauto.de' },
+                { icon: 'bx bx-phone', text: '+49 151 46327 317' },
+                { icon: 'bx bx-envelope', text: '-' },
                 { icon: 'bx bx-time', textKey: 'footer-hours' }
             ]
         }
@@ -560,7 +721,7 @@ function renderDynamicContent() {
                 </div>
                 <h3 data-lang="${service.titleKey}">${translations[currentLang][service.titleKey]}</h3>
                 <p data-lang="${service.textKey}">${translations[currentLang][service.textKey]}</p>
-                <a href="#" class="service-link" data-lang="service-link">${translations[currentLang]['service-link']} <i class='bx bx-right-arrow-alt'></i></a>
+                <a href="#contact" class="service-link" data-lang="service-link">${translations[currentLang]['service-link']} <i class='bx bx-right-arrow-alt'></i></a>
             </div>
         `).join('');
     }
@@ -582,8 +743,8 @@ function renderDynamicContent() {
         carsGrid.innerHTML = appData.cars.map((car, index) => `
             <div class="car-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${(index + 1) * 100}">
                 <div class="car-image">
-                    <img src="${car.image}" alt="${car.title}">
-                    
+                    <img src="${car.image}" alt="${car.title}" loading="lazy">
+                    <div class="car-badge" data-lang="${car.badgeKey}">${translations[currentLang][car.badgeKey]}</div>
                 </div>
                 <div class="car-info">
                     <h3>${car.title}</h3>
@@ -591,18 +752,17 @@ function renderDynamicContent() {
                     <div class="car-features">
                         <div class="car-feature">
                             <i class='bx bxs-gas-pump'></i>
-                            <span>${car.fuel}</span>
+                            <span data-lang="fuel-type">${translations[currentLang]['fuel-type']}: ${car.fuel}</span>
                         </div>
                         <div class="car-feature">
                             <i class='bx bxs-car'></i>
-                            <span>${car.transmission}</span>
+                            <span data-lang="transmission">${translations[currentLang]['transmission']}: ${car.transmission}</span>
                         </div>
                         <div class="car-feature">
                             <i class='bx bx-user'></i>
-                            <span>${car.seats}</span>
+                            <span data-lang="seats">${translations[currentLang]['seats']}: ${car.seats}</span>
                         </div>
                     </div>
-                
                     <a href="#contact" class="btn btn-primary" data-lang="car-btn">${translations[currentLang]['car-btn']}</a>
                 </div>
             </div>
@@ -622,7 +782,7 @@ function renderDynamicContent() {
                 </div>
                 <div class="testimonial-author">
                     <div class="author-avatar">
-                        <img src="${testimonial.avatar}" alt="${testimonial.name}">
+                        <img src="${testimonial.avatar}" alt="${testimonial.name}" loading="lazy">
                     </div>
                     <div class="author-info">
                         <h4>${testimonial.name}</h4>
@@ -630,8 +790,7 @@ function renderDynamicContent() {
                     </div>
                 </div>
                 <div class="testimonial-actions">
-                    <span class="testimonial-date" data-lang="month-ago">${translations[currentLang]['month-ago']}</span>
-                    <a href="#" class="testimonial-link" data-lang="view-on-maps">
+                    <a href="https://maps.app.goo.gl/2q45KZJHKgEeghfW9" target="_blank" class="testimonial-link" data-lang="view-on-maps">
                         ${translations[currentLang]['view-on-maps']} <i class='bx bx-link-external'></i>
                     </a>
                 </div>
@@ -695,9 +854,9 @@ function renderDynamicContent() {
                 <h3>Torop Auto</h3>
                 <p data-lang="footer-about">${translations[currentLang]['footer-about']}</p>
                 <div class="social-links">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    
+                    <a href="https://www.tiktok.com/@torop.auto?_t=ZM-90zed9YJTZY&_r=1" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                    <a href="https://www.instagram.com/toropauto?igsh=MThwcjdoeW5kbnNj" target="_blank"><i class='bx bxl-instagram'></i></a>
+                
                 </div>
             </div>
             ${appData.footerLinks.map(column => `
@@ -717,6 +876,155 @@ function renderDynamicContent() {
             `).join('')}
         `;
     }
+}
+
+// Function to send message to Telegram
+async function sendToTelegram(formData) {
+    const message = `
+📨 Новое сообщение с сайта Torop Auto
+
+👤 Имя: ${formData.name}
+📧 Email: ${formData.email}
+📞 Телефон: ${formData.phone}
+🎯 Тема: ${formData.subject}
+💬 Сообщение:
+${formData.message}
+
+🌐 Язык: ${currentLang}
+🕒 Время: ${new Date().toLocaleString()}
+    `;
+
+    try {
+        const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text: message,
+                parse_mode: 'HTML'
+            })
+        });
+
+        return response.ok;
+    } catch (error) {
+        console.error('Error sending to Telegram:', error);
+        return false;
+    }
+}
+
+// Function to handle form submission
+async function handleFormSubmit(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    
+    // Get form data
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        subject: document.getElementById('subject').options[document.getElementById('subject').selectedIndex].text,
+        message: document.getElementById('message').value
+    };
+    
+    // Validate form
+    if (!formData.name || !formData.email || !formData.message) {
+        showFormMessage('error', translations[currentLang]['form-error']);
+        return;
+    }
+    
+    // Show loading state
+    submitBtn.innerHTML = '<i class="bx bx-loader bx-spin"></i> Отправка...';
+    submitBtn.disabled = true;
+    form.classList.add('form-loading');
+    
+    try {
+        // Send to Telegram
+        const telegramSuccess = await sendToTelegram(formData);
+        
+        if (telegramSuccess) {
+            showFormMessage('success', translations[currentLang]['form-success']);
+            form.reset();
+        } else {
+            showFormMessage('error', translations[currentLang]['form-error']);
+        }
+    } catch (error) {
+        console.error('Form submission error:', error);
+        showFormMessage('error', translations[currentLang]['form-error']);
+    } finally {
+        // Reset loading state
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        form.classList.remove('form-loading');
+    }
+}
+
+// Function to show form messages
+function showFormMessage(type, message) {
+    // Remove existing messages
+    const existingMessage = document.querySelector('.form-success, .form-error');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create new message
+    const messageDiv = document.createElement('div');
+    messageDiv.className = type === 'success' ? 'form-success' : 'form-error';
+    messageDiv.innerHTML = `
+        <i class='bx ${type === 'success' ? 'bx-check-circle' : 'bx-error-circle'}'></i>
+        ${message}
+    `;
+    
+    // Insert before form
+    const form = document.getElementById('contactForm');
+    form.parentNode.insertBefore(messageDiv, form);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 5000);
+}
+
+// Modal functionality
+function initModal() {
+    const modal = document.getElementById('mobileModal');
+    const mobileBtn = document.getElementById('mobileBtn');
+    const closeBtn = document.getElementById('mobileModalClose');
+    const closeBtn2 = document.getElementById('modalCloseBtn');
+    
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    mobileBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+    });
+    
+    closeBtn.addEventListener('click', closeModal);
+    closeBtn2.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 }
 
 // Header scroll effect
@@ -740,7 +1048,7 @@ window.addEventListener('scroll', function() {
 });
 
 // Mobile menu functionality
-document.addEventListener('DOMContentLoaded', function() {
+function initMobileMenu() {
     const menuIcon = document.querySelector('.menu-icon');
     const navMenu = document.getElementById('navMenu');
     const body = document.body;
@@ -780,10 +1088,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
+}
 
 // Language switcher functionality
-document.addEventListener('DOMContentLoaded', function() {
+function initLanguageSwitcher() {
     const languageBtn = document.querySelector('.language-btn');
     const languageDropdown = document.querySelector('.language-dropdown');
     
@@ -810,78 +1118,56 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
-
-// Form submission handling
-document.addEventListener('DOMContentLoaded', function() {
-    document.addEventListener('submit', function(e) {
-        if (e.target.id === 'contactForm') {
-            e.preventDefault();
-            const messages = {
-                ru: 'Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.',
-                de: 'Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden.',
-                uk: 'Дякуємо за ваше повідомлення! Ми зв\'яжемося з вами найближчим часом.'
-            };
-            alert(messages[currentLang]);
-            e.target.reset();
-        }
-    });
-});
+}
 
 // Scroll to top functionality
-document.querySelector('.scroll-to-top').addEventListener('click', function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+function initScrollToTop() {
+    document.querySelector('.scroll-to-top').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
-});
+}
 
 // Animated counter for stats
-function animateCounter() {
+function initCounterAnimation() {
     const counters = document.querySelectorAll('.stat-number');
     const speed = 200;
     
-    counters.forEach(counter => {
-        const target = +counter.getAttribute('data-count');
-        const count = +counter.innerText;
-        const increment = target / speed;
-        
-        if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(animateCounter, 1);
-        } else {
-            counter.innerText = target;
-        }
-    });
-}
-
-// Start counter animation when stats section is in view
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter();
-                observer.unobserve(entry.target);
+    function animateCounter() {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(animateCounter, 1);
+            } else {
+                counter.innerText = target;
             }
         });
-    }, { threshold: 0.5 });
-    
-    observer.observe(statsSection);
+    }
+
+    // Start counter animation when stats section is in view
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(statsSection);
+    }
 }
 
-// Initialize application
-document.addEventListener('DOMContentLoaded', function() {
-    // Load saved language preference
-    const savedLang = localStorage.getItem('preferred-language');
-    if (savedLang && translations[savedLang]) {
-        currentLang = savedLang;
-    }
-    
-    // Set initial language
-    changeLanguage(currentLang);
-    
-    // Smooth scrolling for anchor links
+// Smooth scrolling for anchor links
+function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -894,53 +1180,148 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Prevent horizontal scroll
-    function preventHorizontalScroll() {
-        document.body.style.overflowX = 'hidden';
+}
+
+// Prevent horizontal scroll
+function preventHorizontalScroll() {
+    document.body.style.overflowX = 'hidden';
+}
+
+// Initialize all functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Load saved language preference
+    const savedLang = localStorage.getItem('preferred-language');
+    if (savedLang && translations[savedLang]) {
+        currentLang = savedLang;
     }
     
+    // Set initial language
+    changeLanguage(currentLang);
+    
+    // Initialize all modules
+    initMobileMenu();
+    initLanguageSwitcher();
+    initScrollToTop();
+    initCounterAnimation();
+    initSmoothScroll();
+    initModal();
+    
+    // Form submission
+    document.addEventListener('submit', function(e) {
+        if (e.target.id === 'contactForm') {
+            handleFormSubmit(e);
+        }
+    });
+    
+    // Prevent horizontal scroll
     preventHorizontalScroll();
     window.addEventListener('resize', preventHorizontalScroll);
-});
-
-
-// Header hide/show on scroll
-let lastScrollY = window.scrollY;
-let ticking = false;
-
-function updateHeader() {
-    const header = document.querySelector('header');
-    const currentScrollY = window.scrollY;
     
-    if (currentScrollY > 100) { // Минимальная прокрутка перед началом анимации
-        if (currentScrollY > lastScrollY) {
-            // Скролл вниз - скрываем хедер
-            header.style.transform = 'translateY(-100%)';
-            header.style.opacity = '0';
+    // Header hide/show on scroll
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateHeader() {
+        const header = document.querySelector('header');
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
+            if (currentScrollY > lastScrollY) {
+                header.style.transform = 'translateY(-100%)';
+                header.style.opacity = '0';
+            } else {
+                header.style.transform = 'translateY(0)';
+                header.style.opacity = '1';
+            }
         } else {
-            // Скролл вверх - показываем хедер
             header.style.transform = 'translateY(0)';
             header.style.opacity = '1';
         }
-    } else {
-        // Вверху страницы - всегда показываем хедер
-        header.style.transform = 'translateY(0)';
-        header.style.opacity = '1';
+        
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick);
+    window.addEventListener('load', updateHeader);
+});
+
+// Добавьте эти функции в JavaScript
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            // Close other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+}
+
+function initContactModal() {
+    const modal = document.getElementById('contactModal');
+    const contactBtn = document.getElementById('contactHeaderBtn');
+    const closeBtn = document.getElementById('contactModalClose');
+    
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
     
-    lastScrollY = currentScrollY;
-    ticking = false;
-}
-
-function requestTick() {
-    if (!ticking) {
-        requestAnimationFrame(updateHeader);
-        ticking = true;
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
     }
+    
+    contactBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+    });
+    
+    closeBtn.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 }
 
-window.addEventListener('scroll', requestTick);
-
-// Также обновляем хедер при загрузке страницы
-window.addEventListener('load', updateHeader);
+// Обновите функцию DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    // ... существующий код ...
+    
+    // Добавьте новые инициализации
+    initFAQ();
+    initContactModal();
+    
+    // Обновите статистику
+    appData.stats = [
+        { count: 150, textKey: 'stat1' },
+        { count: 500, textKey: 'stat2' }, 
+        { count: 1200, textKey: 'stat3' },
+        { count: 13, textKey: 'stat4' }
+    ];
+});

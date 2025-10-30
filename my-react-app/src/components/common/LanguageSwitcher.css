@@ -1,0 +1,103 @@
+/* ========== LANGUAGE SWITCHER ========== */
+.language-switcher {
+    position: relative;
+}
+
+.language-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
+    color: var(--text-light);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    transition: all 0.3s var(--ease-out);
+    font-weight: 500;
+    white-space: nowrap;
+    width: auto;
+    height: 44px;
+}
+
+.language-btn:hover {
+    background: rgba(76, 192, 231, 0.1);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 180px;
+    margin-top: var(--space-xs);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.3s var(--ease-out);
+    z-index: 1001;
+    box-shadow: var(--shadow-xl);
+    backdrop-filter: blur(20px);
+}
+
+.language-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.language-option {
+    padding: var(--space-sm) var(--space-md);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.language-option:last-child {
+    border-bottom: none;
+}
+
+.language-option:hover {
+    background: rgba(76, 192, 231, 0.1);
+    padding-left: var(--space-lg);
+}
+
+.language-option.active {
+    color: var(--primary-color);
+    background: rgba(76, 192, 231, 0.15);
+}
+
+.language-option .bx-check {
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-out);
+}
+
+.language-option.active .bx-check {
+    opacity: 1;
+}
+
+/* ========== RESPONSIVE LANGUAGE SWITCHER ========== */
+@media (max-width: 991px) {
+    .language-btn span {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .language-btn {
+        padding: var(--space-sm);
+    }
+    
+    .language-btn span {
+        display: none;
+    }
+}

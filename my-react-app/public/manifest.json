@@ -1,0 +1,17 @@
+{
+  "short_name": "Torop Auto",
+  "name": "Torop Auto - Автосервис и продажа автомобилей",
+  "description": "Профессиональный автосервис и продажа автомобилей в Германии",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4cc0e7",
+  "background_color": "#000000",
+  "lang": "ru"
+}
