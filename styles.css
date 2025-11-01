@@ -2676,3 +2676,479 @@ button:focus, a:focus {
         display: none !important;
     }
 }
+
+
+
+
+
+/* ========== LEGAL MODALS STYLES ========== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 4000;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: var(--space-md);
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-out);
+    backdrop-filter: blur(10px);
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content.legal-modal {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: var(--space-2xl);
+    max-width: 800px;
+    width: 95%;
+    position: relative;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-xl);
+    animation: modalSlideInLegal 0.4s var(--ease-out);
+    margin: var(--space-2xl) auto;
+}
+
+@keyframes modalSlideInLegal {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-content.legal-modal h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-xl);
+    font-weight: 800;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    position: relative;
+    padding-bottom: var(--space-md);
+}
+
+.modal-content.legal-modal h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-1);
+    border-radius: 2px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
+    z-index: 10;
+}
+
+.modal-close:hover {
+    color: var(--primary-color);
+    background: rgba(76, 192, 231, 0.1);
+    border-color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.legal-content {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.legal-content h3 {
+    color: var(--text-light);
+    margin: var(--space-xl) 0 var(--space-md);
+    font-size: 1.375rem;
+    font-weight: 700;
+    position: relative;
+    padding-left: var(--space-md);
+}
+
+.legal-content h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: var(--gradient-1);
+    border-radius: 2px;
+}
+
+.legal-content h4 {
+    color: var(--text-light);
+    margin: var(--space-lg) 0 var(--space-sm);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.legal-content p {
+    margin-bottom: var(--space-md);
+    text-align: justify;
+}
+
+.legal-content strong {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.legal-content ul, .legal-content ol {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+}
+
+.legal-content li {
+    margin-bottom: var(--space-xs);
+    position: relative;
+}
+
+.legal-content ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+}
+
+.legal-content ol {
+    counter-reset: legal-counter;
+}
+
+.legal-content ol li {
+    counter-increment: legal-counter;
+    padding-left: var(--space-sm);
+}
+
+.legal-content ol li::before {
+    content: counter(legal-counter) '.';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+}
+
+.legal-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s var(--ease-out);
+    border-bottom: 1px solid transparent;
+}
+
+.legal-content a:hover {
+    border-bottom-color: var(--primary-color);
+}
+
+/* Legal Sections Styling */
+.legal-section {
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    transition: all 0.3s var(--ease-out);
+}
+
+.legal-section:hover {
+    border-color: var(--primary-color);
+    background: rgba(76, 192, 231, 0.03);
+}
+
+.legal-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact Info Box in Legal */
+.contact-info-box {
+    background: rgba(76, 192, 231, 0.05);
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-1);
+}
+
+.contact-info-box h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-sm);
+    font-size: 1.125rem;
+}
+
+.contact-info-box p {
+    margin-bottom: var(--space-xs);
+    line-height: 1.6;
+}
+
+.contact-info-box strong {
+    color: var(--text-light);
+}
+
+/* Highlight important legal paragraphs */
+.legal-content p strong {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Legal Table Styling */
+.legal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.legal-table th,
+.legal-table td {
+    padding: var(--space-md);
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.legal-table th {
+    background: rgba(76, 192, 231, 0.1);
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.legal-table tr:last-child td {
+    border-bottom: none;
+}
+
+.legal-table tr:hover {
+    background: rgba(76, 192, 231, 0.05);
+}
+
+/* Print Styles for Legal */
+@media print {
+    .modal {
+        position: static;
+        background: white;
+        display: block !important;
+        opacity: 1;
+        padding: 0;
+    }
+    
+    .modal-content.legal-modal {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin: 0;
+        max-width: none;
+    }
+    
+    .modal-close {
+        display: none;
+    }
+}
+
+/* Responsive Design for Legal Modals */
+@media (max-width: 991px) {
+    .modal {
+        padding: var(--space-sm);
+    }
+    
+    .modal-content.legal-modal {
+        padding: var(--space-xl);
+        margin: var(--space-xl) auto;
+    }
+    
+    .modal-content.legal-modal h2 {
+        font-size: 1.75rem;
+        margin-bottom: var(--space-lg);
+    }
+    
+    .legal-content h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .modal-content.legal-modal {
+        padding: var(--space-lg);
+        margin: var(--space-lg) auto;
+        width: 98%;
+    }
+    
+    .modal-content.legal-modal h2 {
+        font-size: 1.5rem;
+        padding-right: var(--space-xl);
+    }
+    
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .legal-content {
+        font-size: 0.95rem;
+    }
+    
+    .legal-content h3 {
+        font-size: 1.125rem;
+        margin: var(--space-lg) 0 var(--space-sm);
+    }
+    
+    .legal-section {
+        padding: var(--space-md);
+    }
+    
+    .contact-info-box {
+        padding: var(--space-md);
+    }
+}
+
+@media (max-width: 575px) {
+    .modal {
+        padding: var(--space-xs);
+    }
+    
+    .modal-content.legal-modal {
+        padding: var(--space-md);
+        margin: var(--space-md) auto;
+        border-radius: 16px;
+    }
+    
+    .modal-content.legal-modal h2 {
+        font-size: 1.375rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .legal-content h3 {
+        font-size: 1.0625rem;
+        padding-left: var(--space-sm);
+    }
+    
+    .legal-content h3::before {
+        width: 3px;
+        height: 16px;
+    }
+    
+    .legal-content ul, .legal-content ol {
+        padding-left: var(--space-md);
+    }
+    
+    .legal-table th,
+    .legal-table td {
+        padding: var(--space-sm);
+        font-size: 0.875rem;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .modal {
+        transition: none;
+    }
+    
+    .modal-content.legal-modal {
+        animation: none;
+    }
+    
+    .modal-close:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .modal-content.legal-modal {
+        border: 2px solid var(--text-light);
+    }
+    
+    .legal-section {
+        border: 1px solid var(--text-light);
+    }
+    
+    .contact-info-box {
+        border: 2px solid var(--primary-color);
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    .modal-content.legal-modal {
+        background: var(--card-bg);
+    }
+    
+    .legal-section {
+        background: rgba(255, 255, 255, 0.03);
+    }
+}
+
+/* Focus styles for accessibility */
+.modal-close:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.legal-content a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Scrollbar styling for legal content */
+.modal-content.legal-modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content.legal-modal::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.modal-content.legal-modal::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.modal-content.legal-modal::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
