@@ -1,6 +1,6 @@
 // Telegram Bot Configuration
-const TELEGRAM_BOT_TOKEN = '7945231022:AAGrXt1RlU0X2gmRCUEk3pOJTNrE7p0oaYE'; // Замените на ваш токен бота
-const TELEGRAM_CHAT_ID = '913725325'; // Замените на ваш chat ID
+const TELEGRAM_BOT_TOKEN = '8441410287:AAHlLS0A8-goraOCZPxl3D00QjQItDsLDRE';
+const TELEGRAM_CHAT_ID = '8326460941';
 
 // Initialize AOS
 AOS.init({
@@ -8,6 +8,8 @@ AOS.init({
     once: true,
     offset: 100
 });
+
+ 
 
 // Language data with complete translations
 const translations = {
@@ -169,7 +171,7 @@ const translations = {
         "faq1-question": "Как быстро вы можете отремонтировать мой автомобиль?",
         "faq1-answer": "Сроки ремонта зависят от сложности работ. Обычно диагностика занимает 1-2 часа, мелкий ремонт - 1-2 дня, капитальный ремонт - 3-7 дней. Мы всегда стараемся минимизировать время простоя вашего автомобиля.",
         "faq2-question": "Как быстро можно получить сервисный термин?",
-"faq2-answer": "Мы предоставляем термин быстро — обычно в течение недели. Свяжитесь с нами, и мы подберем для вас ближайшее удобное время.",
+"faq2-answer": "Мы предоставляем термин быстро — обычно в течение недели. Свяжитесь с нами, и мы подберем для вас ближайшее удобное время.",        
         "faq3-question": "Можете ли вы помочь с покупкой автомобиля в Германии?",
         "faq3-answer": "Конечно! Мы предлагаем полное сопровождение при покупке автомобиля: подбор вариантов, проверка истории, техническая диагностика, оформление документов и помощь с регистрацией.",
         "faq4-question": "Работаете ли вы с конкретными марками автомобилей?",
@@ -184,7 +186,7 @@ const translations = {
         // Contact
         "social-title": "Мы в соцсетях",
         "contact-modal-title": "Свяжитесь с нами"
-    },
+    },    
     de: {
         // Header
         "home": "Startseite",
@@ -342,7 +344,7 @@ const translations = {
         "faq1-question": "Wie schnell können Sie mein Auto reparieren?",
         "faq1-answer": "Die Reparaturzeiten hängen von der Komplexität der Arbeiten ab. Normalerweise dauert die Diagnose 1-2 Stunden, kleine Reparaturen 1-2 Tage, Generalüberholungen 3-7 Tage. Wir versuchen immer, die Standzeit Ihres Fahrzeugs zu minimieren.",
         "faq2-question": "Wie schnell kann ich einen Termin bekommen?",
-"faq2-answer": "Wir bieten Termine schnell an – in der Regel innerhalb einer Woche. Kontaktieren Sie uns, und wir finden den nächstmöglichen, passenden Termin für Sie.",
+"faq2-answer": "Wir bieten Termine schnell an – in der Regel innerhalb einer Woche. Kontaktieren Sie uns, und wir finden den nächstmöglichen, passenden Termin für Sie.",        
         "faq3-question": "Können Sie beim Autokauf in Deutschland helfen?",
         "faq3-answer": "Natürlich! Wir bieten vollständige Begleitung beim Autokauf: Auswahl von Optionen, Überprüfung der Historie, technische Diagnose, Bearbeitung von Dokumenten und Hilfe bei der Zulassung.",
         "faq4-question": "Arbeiten Sie mit bestimmten Automarken?",
@@ -357,7 +359,7 @@ const translations = {
         // Contact
         "social-title": "Wir in sozialen Medien",
         "contact-modal-title": "Kontaktieren Sie uns"
-    },
+    },    
     uk: {
         // Header
         "home": "Головна",
@@ -487,7 +489,7 @@ const translations = {
 
          "faq": "Питання",
         
-        // Hero новые
+        // Hero новые 
         "hero-feature1": "Гарантія якості",
         "hero-feature2": "Швидке обслуговування", 
         "hero-feature3": "Доступні ціни",
@@ -515,7 +517,7 @@ const translations = {
         "faq1-question": "Як швидко ви можете відремонтувати мій автомобіль?",
         "faq1-answer": "Терміни ремонту залежать від складності робіт. Зазвичай діагностика займає 1-2 години, дрібний ремонт - 1-2 дні, капітальний ремонт - 3-7 днів. Ми завжди намагаємося мінімізувати час простою вашого автомобіля.",
         "faq2-question": "Як швидко можна отримати сервісний термін?",
-"faq2-answer": "Ми надаємо термін швидко — зазвичай протягом тижня. Зв'яжіться з нами, і ми підберемо для вас найближчий зручний час.",
+"faq2-answer": "Ми надаємо термін швидко — зазвичай протягом тижня. Зв'яжіться з нами, і ми підберемо для вас найближчий зручний час.",        
         "faq3-question": "Чи можете ви допомогти з покупкою автомобіля в Німеччині?",
         "faq3-answer": "Звичайно! Ми пропонуємо повний супровід при покупці автомобіля: підбір варіантів, перевірка історії, технічна діагностика, оформлення документів та допомога з реєстрацією.",
         "faq4-question": "Чи працюєте ви з конкретними марками автомобілів?",
@@ -530,8 +532,10 @@ const translations = {
         // Contact
         "social-title": "Ми в соцмережах",
         "contact-modal-title": "Зв'яжіться з нами"
-    }
-};
+    }    
+};    
+
+
 
 // Current language
 let currentLang = 'de';
@@ -663,10 +667,16 @@ const appData = {
             links: [
                 { icon: 'bx bx-map', textKey: 'footer-address' },
                 { icon: 'bx bx-phone', text: '+49 151 46327 317' },
-                { icon: 'bx bx-envelope', text: '-' },
+                { icon: 'bx bx-envelope', text: 'info@toropauto.de' },
                 { icon: 'bx bx-time', textKey: 'footer-hours' }
             ]
         }
+    ],
+    stats: [
+        { count: 150, textKey: 'stat1' },
+        { count: 500, textKey: 'stat2' }, 
+        { count: 1200, textKey: 'stat3' },
+        { count: 13, textKey: 'stat4' }
     ]
 };
 
@@ -674,7 +684,6 @@ const appData = {
 function changeLanguage(lang) {
     currentLang = lang;
     
-    // Update all elements with data-lang attribute
     document.querySelectorAll('[data-lang]').forEach(element => {
         const key = element.getAttribute('data-lang');
         if (translations[lang][key]) {
@@ -688,13 +697,11 @@ function changeLanguage(lang) {
         }
     });
     
-    // Update current language display
     const currentLangElement = document.querySelector('[data-lang="current-lang"]');
     if (currentLangElement) {
         currentLangElement.textContent = translations[lang]['current-lang'];
     }
     
-    // Update active language option
     document.querySelectorAll('.language-option').forEach(option => {
         option.classList.remove('active');
         if (option.getAttribute('data-lang') === lang) {
@@ -702,10 +709,7 @@ function changeLanguage(lang) {
         }
     });
     
-    // Close language dropdown
     document.querySelector('.language-dropdown').classList.remove('active');
-    
-    // Re-render dynamic content
     renderDynamicContent();
 }
 
@@ -744,11 +748,9 @@ function renderDynamicContent() {
             <div class="car-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="${(index + 1) * 100}">
                 <div class="car-image">
                     <img src="${car.image}" alt="${car.title}" loading="lazy">
-                    
                 </div>
                 <div class="car-info">
                     <h3>${car.title}</h3>
-             
                     <div class="car-features">
                         <div class="car-feature">
                             <i class='bx bxs-gas-pump'></i>
@@ -842,15 +844,15 @@ function renderDynamicContent() {
                 <label for="message" data-lang="form-message">${translations[currentLang]['form-message']}</label>
                 <textarea id="message" class="form-control" placeholder="${translations[currentLang]['form-message']}" required></textarea>
             </div>
-             <div class="form-group">
-        <div class="checkbox-group">
-            <input type="checkbox" id="privacyCheckbox" required>
-            <label for="privacyCheckbox">
-                Ich stimme der Verarbeitung meiner Daten gemäß der 
-                <a href="#datenschutz" id="datenschutzFormLink">Datenschutzerklärung</a> zu
-            </label>
-        </div>
-    </div>
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="privacyCheckbox" required>
+                    <label for="privacyCheckbox">
+                        Ich stimme der Verarbeitung meiner Daten gemäß der 
+                        <a href="#datenschutz" id="datenschutzFormLink">Datenschutzerklärung</a> zu
+                    </label>
+                </div>
+            </div>
             <button type="submit" class="btn btn-primary" data-lang="form-submit">${translations[currentLang]['form-submit']}</button>
         `;
     }
@@ -865,7 +867,6 @@ function renderDynamicContent() {
                 <div class="social-links">
                     <a href="https://www.tiktok.com/@torop.auto?_t=ZM-90zed9YJTZY&_r=1" target="_blank"><i class='bx bxl-tiktok'></i></a>
                     <a href="https://www.instagram.com/toropauto?igsh=MThwcjdoeW5kbnNj" target="_blank"><i class='bx bxl-instagram'></i></a>
-                
                 </div>
             </div>
             ${appData.footerLinks.map(column => `
@@ -894,7 +895,7 @@ async function sendToTelegram(formData) {
 
 👤 Имя: ${formData.name}
 📧 Email: ${formData.email}
-📞 Телефон: ${formData.phone}
+📞 Телефон: ${formData.phone || 'Не указан'}
 🎯 Тема: ${formData.subject}
 💬 Сообщение:
 ${formData.message}
@@ -904,6 +905,8 @@ ${formData.message}
     `;
 
     try {
+        console.log('Отправка сообщения в Telegram...');
+        
         const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
             method: 'POST',
             headers: {
@@ -916,9 +919,18 @@ ${formData.message}
             })
         });
 
-        return response.ok;
+        const result = await response.json();
+        console.log('Ответ от Telegram:', result);
+
+        if (response.ok) {
+            console.log('Сообщение успешно отправлено в Telegram');
+            return true;
+        } else {
+            console.error('Ошибка Telegram API:', result);
+            return false;
+        }
     } catch (error) {
-        console.error('Error sending to Telegram:', error);
+        console.error('Ошибка отправки в Telegram:', error);
         return false;
     }
 }
@@ -926,19 +938,29 @@ ${formData.message}
 // Function to handle form submission
 async function handleFormSubmit(e) {
     e.preventDefault();
+    console.log('Форма отправлена');
     
     const form = e.target;
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     
+    // Проверка чекбокса приватности
+    const privacyCheckbox = document.getElementById('privacyCheckbox');
+    if (!privacyCheckbox || !privacyCheckbox.checked) {
+        alert('Пожалуйста, согласитесь с политикой конфиденциальности');
+        return;
+    }
+    
     // Get form data
     const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
         subject: document.getElementById('subject').options[document.getElementById('subject').selectedIndex].text,
-        message: document.getElementById('message').value
+        message: document.getElementById('message').value.trim()
     };
+    
+    console.log('Данные формы:', formData);
     
     // Validate form
     if (!formData.name || !formData.email || !formData.message) {
@@ -949,38 +971,37 @@ async function handleFormSubmit(e) {
     // Show loading state
     submitBtn.innerHTML = '<i class="bx bx-loader bx-spin"></i> Отправка...';
     submitBtn.disabled = true;
-    form.classList.add('form-loading');
     
     try {
-        // Send to Telegram
+        console.log('Начинаем отправку в Telegram...');
         const telegramSuccess = await sendToTelegram(formData);
         
         if (telegramSuccess) {
+            console.log('Успешная отправка');
             showFormMessage('success', translations[currentLang]['form-success']);
             form.reset();
+            privacyCheckbox.checked = false;
         } else {
+            console.log('Ошибка отправки');
             showFormMessage('error', translations[currentLang]['form-error']);
         }
     } catch (error) {
-        console.error('Form submission error:', error);
+        console.error('Ошибка при отправке формы:', error);
         showFormMessage('error', translations[currentLang]['form-error']);
     } finally {
         // Reset loading state
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        form.classList.remove('form-loading');
     }
 }
 
 // Function to show form messages
 function showFormMessage(type, message) {
-    // Remove existing messages
     const existingMessage = document.querySelector('.form-success, .form-error');
     if (existingMessage) {
         existingMessage.remove();
     }
     
-    // Create new message
     const messageDiv = document.createElement('div');
     messageDiv.className = type === 'success' ? 'form-success' : 'form-error';
     messageDiv.innerHTML = `
@@ -988,11 +1009,9 @@ function showFormMessage(type, message) {
         ${message}
     `;
     
-    // Insert before form
     const form = document.getElementById('contactForm');
     form.parentNode.insertBefore(messageDiv, form);
     
-    // Auto remove after 5 seconds
     setTimeout(() => {
         messageDiv.remove();
     }, 5000);
@@ -1015,22 +1034,26 @@ function initModal() {
         document.body.style.overflow = '';
     }
     
-    mobileBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-    });
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    }
     
-    closeBtn.addEventListener('click', closeModal);
-    closeBtn2.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeBtn2) closeBtn2.addEventListener('click', closeModal);
     
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
     
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
             closeModal();
         }
     });
@@ -1047,7 +1070,6 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scrolled');
     }
     
-    // Scroll to top button
     const scrollButton = document.querySelector('.scroll-to-top');
     if (scrollTop > 300) {
         scrollButton.classList.add('active');
@@ -1070,7 +1092,6 @@ function initMobileMenu() {
             body.classList.toggle('menu-open');
         });
         
-        // Close mobile menu when clicking on a link
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -1079,7 +1100,6 @@ function initMobileMenu() {
             });
         });
         
-        // Close mobile menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!e.target.closest('nav') && !e.target.closest('.menu-icon')) {
                 navMenu.classList.remove('active');
@@ -1088,7 +1108,6 @@ function initMobileMenu() {
             }
         });
         
-        // Close mobile menu on escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 navMenu.classList.remove('active');
@@ -1114,13 +1133,10 @@ function initLanguageSwitcher() {
             option.addEventListener('click', function() {
                 const lang = this.getAttribute('data-lang');
                 changeLanguage(lang);
-                
-                // Save language preference
                 localStorage.setItem('preferred-language', lang);
             });
         });
         
-        // Close language dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (!e.target.closest('.language-switcher')) {
                 languageDropdown.classList.remove('active');
@@ -1131,12 +1147,15 @@ function initLanguageSwitcher() {
 
 // Scroll to top functionality
 function initScrollToTop() {
-    document.querySelector('.scroll-to-top').addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    const scrollButton = document.querySelector('.scroll-to-top');
+    if (scrollButton) {
+        scrollButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 }
 
 // Animated counter for stats
@@ -1159,7 +1178,6 @@ function initCounterAnimation() {
         });
     }
 
-    // Start counter animation when stats section is in view
     const statsSection = document.querySelector('.stats');
     if (statsSection) {
         const observer = new IntersectionObserver((entries) => {
@@ -1196,8 +1214,172 @@ function preventHorizontalScroll() {
     document.body.style.overflowX = 'hidden';
 }
 
+// FAQ functionality
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            item.classList.toggle('active');
+        });
+    });
+}
+
+// Contact Modal functionality
+function initContactModal() {
+    const modal = document.getElementById('contactModal');
+    const contactBtn = document.getElementById('contactHeaderBtn');
+    const closeBtn = document.getElementById('contactModalClose');
+    
+    function openModal() {
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
+    function closeModal() {
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+    
+    if (contactBtn) {
+        contactBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    }
+    
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
+
+// Legal Modals functionality
+function initLegalModals() {
+    const impressumModal = document.getElementById('impressumModal');
+    const impressumLink = document.getElementById('impressumLink');
+    const impressumClose = document.getElementById('impressumClose');
+
+    const datenschutzModal = document.getElementById('datenschutzModal');
+    const datenschutzLink = document.getElementById('datenschutzLink');
+    const datenschutzClose = document.getElementById('datenschutzClose');
+
+    function openModal(modal) {
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal(modal) {
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (impressumLink && impressumModal) {
+        impressumLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(impressumModal);
+        });
+    }
+
+    if (impressumClose && impressumModal) {
+        impressumClose.addEventListener('click', () => {
+            closeModal(impressumModal);
+        });
+    }
+
+    if (datenschutzLink && datenschutzModal) {
+        datenschutzLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(datenschutzModal);
+        });
+    }
+
+    if (datenschutzClose && datenschutzModal) {
+        datenschutzClose.addEventListener('click', () => {
+            closeModal(datenschutzModal);
+        });
+    }
+
+    [impressumModal, datenschutzModal].forEach(modal => {
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal(modal);
+                }
+            });
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (impressumModal && impressumModal.classList.contains('active')) {
+                closeModal(impressumModal);
+            }
+            if (datenschutzModal && datenschutzModal.classList.contains('active')) {
+                closeModal(datenschutzModal);
+            }
+        }
+    });
+}
+
+// Form Privacy Link
+function initFormPrivacyLink() {
+    const privacyFormLink = document.getElementById('datenschutzFormLink');
+    const datenschutzModal = document.getElementById('datenschutzModal');
+    
+    if (privacyFormLink && datenschutzModal) {
+        privacyFormLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            datenschutzModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+}
+
+// Test Telegram connection
+async function testTelegramConnection() {
+    try {
+        const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getMe`);
+        const result = await response.json();
+        console.log('Проверка соединения с Telegram:', result);
+        return result.ok;
+    } catch (error) {
+        console.error('Ошибка соединения с Telegram:', error);
+        return false;
+    }
+}
+
 // Initialize all functionality
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM загружен, инициализация...');
+    
     // Load saved language preference
     const savedLang = localStorage.getItem('preferred-language');
     if (savedLang && translations[savedLang]) {
@@ -1214,10 +1396,15 @@ document.addEventListener('DOMContentLoaded', function() {
     initCounterAnimation();
     initSmoothScroll();
     initModal();
+    initFAQ();
+    initContactModal();
+    initLegalModals();
+    initFormPrivacyLink();
     
-    // Form submission
+    // Form submission with event delegation
     document.addEventListener('submit', function(e) {
         if (e.target.id === 'contactForm') {
+            console.log('Перехвачена отправка формы');
             handleFormSubmit(e);
         }
     });
@@ -1225,6 +1412,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Prevent horizontal scroll
     preventHorizontalScroll();
     window.addEventListener('resize', preventHorizontalScroll);
+    
+    // Test Telegram connection
+    testTelegramConnection();
+    
+    // Debug info
+    console.log('Telegram Bot Token:', TELEGRAM_BOT_TOKEN ? 'Установлен' : 'Отсутствует');
+    console.log('Telegram Chat ID:', TELEGRAM_CHAT_ID ? 'Установлен' : 'Отсутствует');
     
     // Header hide/show on scroll
     let lastScrollY = window.scrollY;
@@ -1234,7 +1428,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('header');
         const currentScrollY = window.scrollY;
         
-        if (currentScrollY > 100) {
+        if (header && currentScrollY > 100) {
             if (currentScrollY > lastScrollY) {
                 header.style.transform = 'translateY(-100%)';
                 header.style.opacity = '0';
@@ -1242,7 +1436,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 header.style.transform = 'translateY(0)';
                 header.style.opacity = '1';
             }
-        } else {
+        } else if (header) {
             header.style.transform = 'translateY(0)';
             header.style.opacity = '1';
         }
@@ -1260,202 +1454,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', requestTick);
     window.addEventListener('load', updateHeader);
-});
-
-// Добавьте эти функции в JavaScript
-function initFAQ() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        question.addEventListener('click', () => {
-            // Close other items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
-            
-            // Toggle current item
-            item.classList.toggle('active');
-        });
-    });
-}
-
-function initContactModal() {
-    const modal = document.getElementById('contactModal');
-    const contactBtn = document.getElementById('contactHeaderBtn');
-    const closeBtn = document.getElementById('contactModalClose');
-    
-    function openModal() {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    contactBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-    });
-    
-    closeBtn.addEventListener('click', closeModal);
-    
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-    
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-}
-
-// Обновите функцию DOMContentLoaded
-document.addEventListener('DOMContentLoaded', function() {
-    // ... существующий код ...
-    
-    // Добавьте новые инициализации
-    initFAQ();
-    initContactModal();
-    
-    // Обновите статистику
-    appData.stats = [
-        { count: 150, textKey: 'stat1' },
-        { count: 500, textKey: 'stat2' }, 
-        { count: 1200, textKey: 'stat3' },
-        { count: 13, textKey: 'stat4' }
-    ];
-});
-
-
-// Legal Modals functionality
-function initLegalModals() {
-    // Impressum Modal
-    const impressumModal = document.getElementById('impressumModal');
-    const impressumLink = document.getElementById('impressumLink');
-    const impressumClose = document.getElementById('impressumClose');
-
-    // Datenschutz Modal  
-    const datenschutzModal = document.getElementById('datenschutzModal');
-    const datenschutzLink = document.getElementById('datenschutzLink');
-    const datenschutzClose = document.getElementById('datenschutzClose');
-
-    function openModal(modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal(modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    // Impressum handlers
-    impressumLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal(impressumModal);
-    });
-
-    impressumClose.addEventListener('click', () => {
-        closeModal(impressumModal);
-    });
-
-    // Datenschutz handlers
-    datenschutzLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal(datenschutzModal);
-    });
-
-    datenschutzClose.addEventListener('click', () => {
-        closeModal(datenschutzModal);
-    });
-
-    // Close on backdrop click
-    [impressumModal, datenschutzModal].forEach(modal => {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal(modal);
-            }
-        });
-    });
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            if (impressumModal.classList.contains('active')) {
-                closeModal(impressumModal);
-            }
-            if (datenschutzModal.classList.contains('active')) {
-                closeModal(datenschutzModal);
-            }
-        }
-    });
-}
-
-// Form Privacy Link
-function initFormPrivacyLink() {
-    const privacyFormLink = document.getElementById('datenschutzFormLink');
-    const datenschutzModal = document.getElementById('datenschutzModal');
-    
-    if (privacyFormLink) {
-        privacyFormLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            datenschutzModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    }
-}
-
-// Update form submission to check privacy checkbox
-function handleFormSubmit(e) {
-    e.preventDefault();
-    
-    const privacyCheckbox = document.getElementById('privacyCheckbox');
-    
-    // Check privacy consent
-    if (!privacyCheckbox.checked) {
-        alert('Bitte stimmen Sie der Datenschutzerklärung zu.');
-        return;
-    }
-    
-    // Your existing form submission code here
-    // ...
-}
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initLegalModals();
-    initFormPrivacyLink();
-    
-    // Update form submission handler
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', handleFormSubmit);
-    }
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    // ... существующий код ...
-    
-    // Initialize image modal
-    const reinitImageModal = initImageModal();
-    
-    // Preload images for better performance
-    preloadImages();
-    
-    // Re-initialize image clicks when language changes
-    const originalChangeLanguage = changeLanguage;
-    changeLanguage = function(lang) {
-        originalChangeLanguage(lang);
-        setTimeout(reinitImageModal, 300); // Wait for re-render
-    };
 });
