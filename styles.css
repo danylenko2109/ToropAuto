@@ -609,11 +609,19 @@ nav a:hover::after {
     padding: 0 var(--space-sm);
 }
 
+/* ========== SERVICES SECTION - FIXED HEIGHT ========== */
+.services {
+    padding: var(--space-2xl) 0;
+    position: relative;
+    width: 100%;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: var(--space-lg);
     width: 100%;
+    align-items: stretch;
 }
 
 .service-card {
@@ -626,6 +634,10 @@ nav a:hover::after {
     border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 400px; /* Фиксированная минимальная высота */
 }
 
 .service-card::before {
@@ -651,6 +663,12 @@ nav a:hover::after {
     box-shadow: var(--shadow-glow), var(--shadow-xl);
 }
 
+/* Фиксированный контейнер для иконки */
+.service-icon-container {
+    flex-shrink: 0;
+    margin-bottom: var(--space-lg);
+}
+
 .service-icon {
     width: 90px;
     height: 90px;
@@ -659,7 +677,7 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto var(--space-lg);
+    margin: 0 auto;
     border: 2px solid transparent;
     transition: all 0.4s var(--ease-out);
     position: relative;
@@ -684,17 +702,80 @@ nav a:hover::after {
     transform: rotateY(-180deg);
 }
 
+/* Контентная часть с автоматической высотой */
+.service-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.service-header {
+    flex-shrink: 0;
+    margin-bottom: var(--space-md);
+}
+
 .service-card h3 {
     font-size: 1.5rem;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
     font-weight: 700;
+    line-height: 1.3;
+    min-height: 2.6em; /* Фиксированная высота для заголовка (2 строки) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Основной текст - занимает всё доступное пространство */
+.service-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    margin-bottom: var(--space-md);
 }
 
 .service-card p {
     color: var(--text-muted);
     line-height: 1.6;
-    margin-bottom: var(--space-lg);
     font-size: 1rem;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto; /* Прокрутка если текст слишком длинный */
+    max-height: 120px; /* Максимальная высота для текста */
+    padding: 0 4px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+}
+
+/* Стилизация скроллбара для текста */
+.service-card p::-webkit-scrollbar {
+    width: 4px;
+}
+
+.service-card p::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 2px;
+}
+
+.service-card p::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.service-card p::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+/* Футер карточки */
+.service-footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-light);
 }
 
 .service-link {
@@ -706,12 +787,13 @@ nav a:hover::after {
     gap: var(--space-xs);
     transition: all 0.3s var(--ease-out);
     position: relative;
+    padding: var(--space-xs) 0;
 }
 
 .service-link::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
@@ -725,6 +807,185 @@ nav a:hover::after {
 
 .service-link:hover::after {
     width: 100%;
+}
+
+/* Альтернативный вариант с автоматической высотой */
+.services-grid.auto-height .service-card {
+    min-height: auto;
+    height: auto;
+}
+
+.services-grid.auto-height .service-text {
+    min-height: 120px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 991px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+        gap: var(--space-md);
+    }
+    
+    .service-card {
+        padding: var(--space-lg);
+        min-height: 380px;
+    }
+    
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: var(--space-md);
+    }
+    
+    .service-icon i {
+        font-size: 2rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+        min-height: 2.4em;
+    }
+    
+    .service-card p {
+        font-size: 0.95rem;
+        max-height: 110px;
+    }
+}
+
+@media (max-width: 767px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .service-card {
+        min-height: 360px;
+        padding: var(--space-md);
+    }
+    
+    .service-card h3 {
+        font-size: 1.25rem;
+        min-height: 2.2em;
+    }
+    
+    .service-card p {
+        font-size: 0.95rem;
+        max-height: 100px;
+        line-height: 1.5;
+    }
+    
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: var(--space-md);
+    }
+    
+    .service-icon i {
+        font-size: 1.75rem;
+    }
+    
+    .service-footer {
+        padding-top: var(--space-sm);
+    }
+}
+
+@media (max-width: 575px) {
+    .service-card {
+        min-height: 340px;
+        padding: var(--space-md);
+    }
+    
+    .service-card h3 {
+        font-size: 1.125rem;
+        min-height: 2em;
+        margin-bottom: var(--space-sm);
+    }
+    
+    .service-card p {
+        font-size: 0.9rem;
+        max-height: 90px;
+        line-height: 1.5;
+        margin-bottom: var(--space-sm);
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        margin-bottom: var(--space-sm);
+    }
+    
+    .service-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .service-footer {
+        padding-top: var(--space-sm);
+    }
+}
+
+/* Гарантия одинакового выравнивания для всех карточек */
+.services-grid {
+    align-items: stretch;
+}
+
+/* Фикс для очень длинных заголовков */
+.service-card h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Фикс для очень длинного текста */
+.service-card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+/* Анимация загрузки для контента */
+.service-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: serviceContentFadeIn 0.6s var(--ease-out) forwards;
+}
+
+@keyframes serviceContentFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Задержка для анимации карточек */
+.service-card:nth-child(1) .service-content { animation-delay: 0.1s; }
+.service-card:nth-child(2) .service-content { animation-delay: 0.2s; }
+.service-card:nth-child(3) .service-content { animation-delay: 0.3s; }
+.service-card:nth-child(4) .service-content { animation-delay: 0.4s; }
+.service-card:nth-child(5) .service-content { animation-delay: 0.5s; }
+.service-card:nth-child(6) .service-content { animation-delay: 0.6s; }
+
+/* Вариант с прокруткой для очень длинных текстов */
+.service-card.scrollable .service-text {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.service-card.scrollable p {
+    max-height: none;
+    overflow-y: visible;
+}
+
+/* Вариант с фиксированным количеством строк */
+.service-card.fixed-lines p {
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Максимум 5 строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 8em; /* 5 строк * 1.6 line-height */
+    overflow-y: hidden;
 }
 
 /* ========== ABOUT SECTION ========== */
@@ -1151,7 +1412,7 @@ nav a:hover::after {
     object-fit: contain;
 }
 
-/* ========== TESTIMONIALS SECTION ========== */
+/* ========== TESTIMONIALS SECTION - FIXED WIDTH ========== */
 .testimonials {
     padding: var(--space-2xl) 0;
     background: var(--background);
@@ -1162,11 +1423,12 @@ nav a:hover::after {
 
 .testimonials-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Фиксированная минимальная ширина */
     gap: var(--space-lg);
     position: relative;
     z-index: 2;
     width: 100%;
+    align-items: stretch; /* Выравнивание по высоте */
 }
 
 .testimonial-card {
@@ -1181,7 +1443,31 @@ nav a:hover::after {
     display: flex;
     flex-direction: column;
     height: 100%;
-    min-height: 280px; /* Фиксированная минимальная высота */
+    min-height: 280px;
+    width: 100%; /* Фиксированная ширина */
+    max-width: 100%; /* Предотвращает растягивание */
+}
+
+/* Альтернативный вариант с фиксированной шириной через flex */
+.testimonials-container.fixed-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+.testimonials-container.fixed-width .testimonial-card {
+    flex: 0 0 320px; /* Фиксированная ширина 320px */
+    max-width: 320px;
+    min-width: 320px;
+}
+
+/* Гарантия одинаковой ширины */
+.testimonial-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 0 auto; /* Центрирование если используется flex */
 }
 
 .testimonial-card:hover {
@@ -1210,10 +1496,19 @@ nav a:hover::after {
     font-size: 0.95rem;
     flex-grow: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* Ограничение текста до 4 строк */
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     position: relative;
+    min-height: 80px; /* Минимальная высота для текста */
+}
+
+/* Фиксированная высота для контента */
+.testimonial-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 180px; /* Минимальная высота контента */
 }
 
 /* Градиент для длинного текста */
@@ -1250,6 +1545,7 @@ nav a:hover::after {
     box-shadow: var(--shadow-sm);
     transition: transform 0.3s var(--ease-out);
     flex-shrink: 0;
+    background-color: white;
 }
 
 .testimonial-card:hover .author-avatar {
@@ -1315,6 +1611,104 @@ nav a:hover::after {
     gap: 8px;
 }
 
+/* ========== RESPONSIVE DESIGN FOR TESTIMONIALS ========== */
+@media (max-width: 1200px) {
+    .testimonials-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 991px) {
+    .testimonials-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .testimonial-card {
+        min-height: 260px;
+        padding: var(--space-md);
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonials-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .testimonial-card {
+        min-height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Альтернативный вариант для мобильных */
+    .testimonials-container.mobile-fixed .testimonial-card {
+        width: 100%;
+        max-width: 400px;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        padding: var(--space-md);
+        min-height: auto;
+    }
+    
+    .testimonial-author {
+        gap: var(--space-sm);
+    }
+    
+    .author-avatar {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .testimonial-text {
+        min-height: 70px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Фикс для очень длинных текстов */
+.author-info h4,
+.author-info p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Гарантируем одинаковое выравнивание */
+.testimonial-card {
+    align-content: flex-start;
+}
+
+/* Анимация появления */
+.testimonial-card {
+    animation: fadeInUp 0.6s var(--ease-out) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Задержка для анимации карточек */
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+.testimonial-card:nth-child(4) { animation-delay: 0.4s; }
 /* ========== CONTACT SECTION ========== */
 .contact {
     padding: var(--space-2xl) 0;

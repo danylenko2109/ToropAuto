@@ -22,12 +22,18 @@ const translations = {
         "testimonials": "Отзывы",
         "contact": "Контакты",
         "current-lang": "Русский",
+        "faq": "Вопросы",
         
         // Hero
         "hero-title": "Профессиональный <span>автосервис</span> и продажа автомобилей",
         "hero-text": "Torop Auto предлагает полный спектр услуг по обслуживанию, ремонту и продаже автомобилей. Мы гарантируем качество, надежность и индивидуальный подход к каждому клиенту.",
         "services-btn": "Наши услуги",
         "cars-btn": "Автомобили в наличии",
+        "hero-feature1": "Гарантия качества",
+        "hero-feature2": "Быстрое обслуживание", 
+        "hero-feature3": "Доступные цены",
+        "hero-badge-text": "Лучший автосервис 2024",
+        "contact-btn": "Бесплатная консультация",
         
         // Stats
         "stat1": "Автомобилей продано",
@@ -40,16 +46,16 @@ const translations = {
         "services-subtitle": "Мы предлагаем широкий спектр услуг для вашего автомобиля, используя современное оборудование и передовые технологии",
         "service1-title": "Техническое обслуживание",
         "service1-text": "Регулярное техническое обслуживание для поддержания вашего автомобиля в идеальном состоянии. Замена масла, фильтров, диагностика систем.",
-        "service2-title": "Ремонт двигателя",
-        "service2-text": "Диагностика и ремонт двигателей любой сложности с использованием современного оборудования. Капитальный ремонт, замена компонентов.",
-        "service3-title": "Кузовной ремонт",
-        "service3-text": "Качественный кузовной ремонт и покраска с гарантией долговечности и сохранения внешнего вида. Рихтовка, шпаклевка, антикоррозийная обработка.",
-        "service4-title": "Электрика и электроника",
-        "service4-text": "Диагностика и ремонт электрических систем, бортовых компьютеров и электронных компонентов. Установка дополнительного оборудования.",
-        "service5-title": "Ремонт трансмиссии",
-        "service5-text": "Профессиональный ремонт автоматических и механических коробок передач. Замена сцепления, ремонт дифференциалов, обслуживание КПП.",
-        "service6-title": "Диагностика и ТО",
-        "service6-text": "Комплексная компьютерная диагностика всех систем автомобиля. Регулярное техническое обслуживание по регламенту производителя.",
+        "service2-title": "Smart Repair",
+        "service2-text": "Быстрый и качественный ремонт мелких повреждений кузова без необходимости полной покраски. Устранение царапин, сколов, вмятин.",
+        "service3-title": "Шиномонтаж и продажа шин",
+        "service3-text": "Профессиональный шиномонтаж, балансировка колес и продажа качественных шин от ведущих производителей. Сезонная смена резины.",
+        "service4-title": "Автообработка (Aufbereitung)",
+        "service4-text": "Комплексная обработка кузова и салона для восстановления внешнего вида автомобиля. Полировка, защитное покрытие, химчистка.",
+        "service5-title": "Продажа запчастей",
+        "service5-text": "Широкий выбор оригинальных и качественных аналоговых запчастей для всех марок автомобилей. Консультация по подбору.",
+        "service6-title": "Услуги по регистрации",
+        "service6-text": "Полное сопровождение регистрации автомобиля, получение экспортных номеров, помощь с документами и страховкой.",
         "service-link": "Подробнее",
         
         // About
@@ -60,8 +66,9 @@ const translations = {
         "feature2": "Современное диагностическое оборудование",
         "feature3": "Опытные и сертифицированные специалисты",
         "feature4": "Доступные цены и гибкая система скидок",
-        "feature5": "Широкий выбор оригинальных запчастей",
+        "feature5": "Полный ассортимент оригинальных деталей и надежных аналоговых решений",
         "feature6": "Удобное расположение и парковка",
+        "experience-text": "лет успешной работы",
         
         // Cars
         "cars-title": "Автомобили в наличии",
@@ -77,6 +84,12 @@ const translations = {
         "seats": "Места",
         "car-btn": "Узнать больше",
         
+        // Additional Services
+        "service7-title": "Автоподбор под заказ",
+        "service7-text": "Индивидуальный подбор автомобиля по вашим параметрам и требованиям. Поиск лучших вариантов на рынке с полной проверкой истории и состояния.",
+        "service8-title": "Автомобили с аукционов",
+        "service8-text": "Покупка автомобилей с немецких аукционов с экономией до 30%. Полное сопровождение сделки, проверка и гарантия качества.",
+        
         // Platforms
         "platforms-title": "Больше автомобилей на популярных площадках",
         "platforms-subtitle": "Ищете больше вариантов? Посмотрите наши предложения на ведущих автомобильных площадках",
@@ -88,6 +101,18 @@ const translations = {
         "modal-text": "В настоящее время страница на mobile.de находится в разработке. Скоро здесь появятся наши автомобили!",
         "modal-close": "Закрыть",
         
+        // Process
+        "process-title": "Как мы работаем",
+        "process-subtitle": "Прозрачный процесс работы от заявки до результата",
+        "process-step1-title": "Консультация",
+        "process-step1-text": "Вы оставляете заявку, мы связываемся с вами и уточняем детали",
+        "process-step2-title": "Диагностика", 
+        "process-step2-text": "Проводим полную диагностику и составляем смету",
+        "process-step3-title": "Ремонт",
+        "process-step3-text": "Выполняем работы с использованием качественных запчастей",
+        "process-step4-title": "Результат",
+        "process-step4-text": "Вы получаете готовый результат с гарантией качества",
+        
         // Testimonials
         "testimonials-title": "Отзывы клиентов",
         "testimonials-subtitle": "Что говорят наши клиенты о качестве наших услуг",
@@ -96,6 +121,24 @@ const translations = {
         "testimonial3-text": "Супер 👍🏻 очень мило, отличный сервис",
         "view-on-maps": "Смотреть на Картах",
         "month-ago": "месяц назад",
+        
+        // FAQ
+        "faq-title": "Часто задаваемые вопросы",
+        "faq-subtitle": "Ответы на самые популярные вопросы о наших услугах",
+        "faq1-question": "Как быстро вы можете отремонтировать мой автомобиль?",
+        "faq1-answer": "Сроки ремонта зависят от сложности работ. Обычно диагностика занимает 1-2 часа, мелкий ремонт - 1-2 дня, капитальный ремонт - 3-7 дней. Мы всегда стараемся минимизировать время простоя вашего автомобиля.",
+        "faq2-question": "Как быстро можно получить сервисный термин?",
+        "faq2-answer": "Мы предоставляем термин быстро — обычно в течение недели. Свяжитесь с нами, и мы подберем для вас ближайшее удобное время.",        
+        "faq3-question": "Можете ли вы помочь с покупкой автомобиля в Германии?",
+        "faq3-answer": "Конечно! Мы предлагаем полное сопровождение при покупке автомобиля: подбор вариантов, проверка истории, техническая диагностика, оформление документов и помощь с регистрацией.",
+        "faq4-question": "Работаете ли вы с конкретными марками автомобилей?",
+        "faq4-answer": "Мы работаем со всеми марками автомобилей: от Volkswagen, BMW, Mercedes до Audi, Opel, Ford и других. Наши специалисты имеют опыт работы с различными брендами.",
+        
+        // CTA
+        "cta-title": "Готовы начать сотрудничество?",
+        "cta-text": "Свяжитесь с нами сегодня и получите бесплатную консультацию по вашему автомобилю",
+        "cta-btn-primary": "Получить консультацию",
+        "cta-btn-phone": "Позвонить сейчас",
         
         // Contact
         "contact-title": "Свяжитесь с нами",
@@ -106,8 +149,11 @@ const translations = {
         "address-text": "Hohlstraße 43, 55743 Idar-Oberstein",
         "phone-title": "Телефон",
         "email-title": "Email",
+        "email-text": "gtautomobile2024@gmail.com",
         "hours-title": "Часы работы",
         "hours-text": "Пн-Пт: 9:00 - 17:00<br>Сб: 9:00 - 15:00<br>Вс: выходной",
+        "social-title": "Мы в соцсетях",
+        "contact-modal-title": "Свяжитесь с нами",
         
         // Form
         "form-name": "Ваше имя",
@@ -128,9 +174,9 @@ const translations = {
         "footer-about": "Профессиональный автосервис и продажа автомобилей. Мы гарантируем качество, надежность и индивидуальный подход к каждому клиенту. Более 13 лет на рынке автомобильных услуг.",
         "footer-services-title": "Наши услуги",
         "footer-service1": "Техническое обслуживание",
-        "footer-service2": "Ремонт двигателя",
-        "footer-service3": "Кузовной ремонт",
-        "footer-service4": "Электрика и электроника",
+        "footer-service2": "Smart Repair",
+        "footer-service3": "Шиномонтаж и шины",
+        "footer-service4": "Автообработка",
         "footer-service5": "Продажа автомобилей",
         "footer-contact-title": "Контакты",
         "footer-address": "Hohlstraße 43, 55743 Idar-Oberstein",
@@ -138,55 +184,8 @@ const translations = {
         "footer-rights": "Все права защищены.",
         
         // Loading
-        "loading-text": "Загрузка...",
-
-        // Header новые
-        "faq": "Вопросы",
-        
-        // Hero новые
-        "hero-feature1": "Гарантия качества",
-        "hero-feature2": "Быстрое обслуживание", 
-        "hero-feature3": "Доступные цены",
-        "hero-badge-text": "Лучший автосервис 2024",
-        "contact-btn": "Бесплатная консультация",
-        
-        // Process
-        "process-title": "Как мы работаем",
-        "process-subtitle": "Прозрачный процесс работы от заявки до результата",
-        "process-step1-title": "Консультация",
-        "process-step1-text": "Вы оставляете заявку, мы связываемся с вами и уточняем детали",
-        "process-step2-title": "Диагностика", 
-        "process-step2-text": "Проводим полную диагностику и составляем смету",
-        "process-step3-title": "Ремонт",
-        "process-step3-text": "Выполняем работы с использованием качественных запчастей",
-        "process-step4-title": "Результат",
-        "process-step4-text": "Вы получаете готовый результат с гарантией качества",
-        
-        // About
-        "experience-text": "лет успешной работы",
-        
-        // FAQ
-        "faq-title": "Часто задаваемые вопросы",
-        "faq-subtitle": "Ответы на самые популярные вопросы о наших услугах",
-        "faq1-question": "Как быстро вы можете отремонтировать мой автомобиль?",
-        "faq1-answer": "Сроки ремонта зависят от сложности работ. Обычно диагностика занимает 1-2 часа, мелкий ремонт - 1-2 дня, капитальный ремонт - 3-7 дней. Мы всегда стараемся минимизировать время простоя вашего автомобиля.",
-        "faq2-question": "Как быстро можно получить сервисный термин?",
-"faq2-answer": "Мы предоставляем термин быстро — обычно в течение недели. Свяжитесь с нами, и мы подберем для вас ближайшее удобное время.",        
-        "faq3-question": "Можете ли вы помочь с покупкой автомобиля в Германии?",
-        "faq3-answer": "Конечно! Мы предлагаем полное сопровождение при покупке автомобиля: подбор вариантов, проверка истории, техническая диагностика, оформление документов и помощь с регистрацией.",
-        "faq4-question": "Работаете ли вы с конкретными марками автомобилей?",
-        "faq4-answer": "Мы работаем со всеми марками автомобилей: от Volkswagen, BMW, Mercedes до Audi, Opel, Ford и других. Наши специалисты имеют опыт работы с различными брендами.",
-        
-        // CTA
-        "cta-title": "Готовы начать сотрудничество?",
-        "cta-text": "Свяжитесь с нами сегодня и получите бесплатную консультацию по вашему автомобилю",
-        "cta-btn-primary": "Получить консультацию",
-        "cta-btn-phone": "Позвонить сейчас",
-        
-        // Contact
-        "social-title": "Мы в соцсетях",
-        "contact-modal-title": "Свяжитесь с нами"
-    },    
+        "loading-text": "Загрузка..."
+    },
     de: {
         // Header
         "home": "Startseite",
@@ -196,12 +195,18 @@ const translations = {
         "testimonials": "Bewertungen",
         "contact": "Kontakt",
         "current-lang": "Deutsch",
+        "faq": "FAQ",
         
         // Hero
         "hero-title": "Professionelle <span>Autowerkstatt</span> und Autoverkauf",
         "hero-text": "Torop Auto bietet ein komplettes Spektrum an Dienstleistungen für Wartung, Reparatur und Verkauf von Autos. Wir garantieren Qualität, Zuverlässigkeit und individuelle Betreuung für jeden Kunden.",
         "services-btn": "Unsere Dienstleistungen",
         "cars-btn": "Verfügbare Autos",
+        "hero-feature1": "Qualitätsgarantie",
+        "hero-feature2": "Schneller Service", 
+        "hero-feature3": "Erschwingliche Preise",
+        "hero-badge-text": "Beste Autowerkstatt 2024",
+        "contact-btn": "Kostenlose Beratung",
         
         // Stats
         "stat1": "Autos verkauft",
@@ -214,16 +219,16 @@ const translations = {
         "services-subtitle": "Wir bieten ein breites Spektrum an Dienstleistungen für Ihr Auto mit modernster Ausrüstung und fortschrittlichen Technologien",
         "service1-title": "Wartung",
         "service1-text": "Regelmäßige Wartung, um Ihr Auto in perfektem Zustand zu halten. Ölwechsel, Filterwechsel, Systemdiagnose.",
-        "service2-title": "Motorreparatur",
-        "service2-text": "Diagnose und Reparatur von Motoren jeder Komplexität mit modernster Ausrüstung. Generalüberholung, Austausch von Komponenten.",
-        "service3-title": "Karosseriereparatur",
-        "service3-text": "Hochwertige Karosseriereparatur und Lackierung mit Garantie für Langlebigkeit und Erhaltung des Aussehens. Ausbeulen, Spachteln, Rostschutz.",
-        "service4-title": "Elektrik und Elektronik",
-        "service4-text": "Diagnose und Reparatur elektrischer Systeme, Bordcomputer und elektronischer Komponenten. Installation von Zubehör.",
-        "service5-title": "Getriebereparatur",
-        "service5-text": "Professionelle Reparatur von Automatik- und Schaltgetrieben. Kupplungswechsel, Differentialreparatur, Wartung des Getriebes.",
-        "service6-title": "Diagnose und Wartung",
-        "service6-text": "Umfassende Computerdiagnose aller Fahrzeugsysteme. Regelmäßige Wartung nach Herstellervorschrift.",
+        "service2-title": "Smart Repair",
+        "service2-text": "Schnelle und hochwertige Reparatur kleiner Karosserieschäden ohne komplette Lackierung. Entfernung von Kratzern, Steinschlägen, Dellen.",
+        "service3-title": "Reifenwechsel und Reifenverkauf",
+        "service3-text": "Professioneller Reifenwechsel, Radauswuchtung und Verkauf qualitativ hochwertiger Reifen führender Marken. Saisonale Reifenwechsel.",
+        "service4-title": "Aufbereitung",
+        "service4-text": "Umfassende Aufbereitung von Karosserie und Innenraum zur Wiederherstellung des Fahrzeugaussehens. Polieren, Schutzbeschichtung, Innereinigung.",
+        "service5-title": "Ersatzteilverkauf",
+        "service5-text": "Vollständiges Sortiment an Originalkomponenten und zuverlässigen Alternativlösungen",
+        "service6-title": "Zulassungsdienste",
+        "service6-text": "Vollständige Unterstützung bei der Fahrzeugzulassung, Beschaffung von Exportkennzeichen, Hilfe mit Dokumenten und Versicherung.",
         "service-link": "Mehr erfahren",
         
         // About
@@ -234,8 +239,9 @@ const translations = {
         "feature2": "Moderne Diagnosegeräte",
         "feature3": "Erfahrene und zertifizierte Fachkräfte",
         "feature4": "Erschwingliche Preise und flexibles Rabattsystem",
-        "feature5": "Große Auswahl an Originalteilen",
+        "feature5": "Vollständiges Sortiment an Originalkomponenten und zuverlässigen Alternativlösungen",
         "feature6": "Günstige Lage und Parkplätze",
+        "experience-text": "Jahre erfolgreiche Arbeit",
         
         // Cars
         "cars-title": "Verfügbare Autos",
@@ -251,6 +257,12 @@ const translations = {
         "seats": "Sitze",
         "car-btn": "Mehr erfahren",
         
+        // Additional Services
+        "service7-title": "Autosuche auf Bestellung",
+        "service7-text": "Individuelle Autosuche nach Ihren Parametern und Anforderungen. Suche nach den besten Optionen auf dem Markt mit vollständiger Überprüfung der Historie und des Zustands.",
+        "service8-title": "Autos von Auktionen",
+        "service8-text": "Kauf von Autos von deutschen Auktionen mit Einsparungen bis zu 30%. Vollständige Transaktionsbegleitung, Überprüfung und Qualitätsgarantie.",
+        
         // Platforms
         "platforms-title": "Weitere Autos auf beliebten Plattformen",
         "platforms-subtitle": "Suchen Sie nach mehr Optionen? Sehen Sie sich unsere Angebote auf führenden Autoplattformen an",
@@ -262,6 +274,18 @@ const translations = {
         "modal-text": "Die mobile.de-Seite befindet sich derzeit in Entwicklung. Bald werden hier unsere Autos erscheinen!",
         "modal-close": "Schließen",
         
+        // Process
+        "process-title": "So arbeiten wir",
+        "process-subtitle": "Transparenter Arbeitsprozess von der Anfrage bis zum Ergebnis",
+        "process-step1-title": "Beratung",
+        "process-step1-text": "Sie stellen eine Anfrage, wir kontaktieren Sie und klären die Details",
+        "process-step2-title": "Diagnose", 
+        "process-step2-text": "Wir führen eine vollständige Diagnose durch und erstellen einen Kostenvoranschlag",
+        "process-step3-title": "Reparatur",
+        "process-step3-text": "Wir führen Arbeiten mit hochwertigen Ersatzteilen durch",
+        "process-step4-title": "Ergebnis",
+        "process-step4-text": "Sie erhalten ein fertiges Ergebnis mit Qualitätsgarantie",
+        
         // Testimonials
         "testimonials-title": "Kundenbewertungen",
         "testimonials-subtitle": "Was unsere Kunden über die Qualität unserer Dienstleistungen sagen",
@@ -270,6 +294,24 @@ const translations = {
         "testimonial3-text": "Super 👍🏻 sehr nett, exzellenter Service",
         "view-on-maps": "Auf Maps ansehen",
         "month-ago": "vor einem Monat",
+        
+        // FAQ
+        "faq-title": "Häufig gestellte Fragen",
+        "faq-subtitle": "Antworten auf die häufigsten Fragen zu unseren Dienstleistungen",
+        "faq1-question": "Wie schnell können Sie mein Auto reparieren?",
+        "faq1-answer": "Die Reparaturzeiten hängen von der Komplexität der Arbeiten ab. Normalerweise dauert die Diagnose 1-2 Stunden, kleine Reparaturen 1-2 Tage, Generalüberholungen 3-7 Tage. Wir versuchen immer, die Standzeit Ihres Fahrzeugs zu minimieren.",
+        "faq2-question": "Wie schnell kann ich einen Termin bekommen?",
+        "faq2-answer": "Wir bieten Termine schnell an – in der Regel innerhalb einer Woche. Kontaktieren Sie uns, und wir finden den nächstmöglichen, passenden Termin für Sie.",        
+        "faq3-question": "Können Sie beim Autokauf in Deutschland helfen?",
+        "faq3-answer": "Natürlich! Wir bieten vollständige Begleitung beim Autokauf: Auswahl von Optionen, Überprüfung der Historie, technische Diagnose, Bearbeitung von Dokumenten und Hilfe bei der Zulassung.",
+        "faq4-question": "Arbeiten Sie mit bestimmten Automarken?",
+        "faq4-answer": "Wir arbeiten mit allen Automarken: von Volkswagen, BMW, Mercedes bis Audi, Opel, Ford und anderen. Unsere Spezialisten haben Erfahrung mit verschiedenen Marken.",
+        
+        // CTA
+        "cta-title": "Bereit für die Zusammenarbeit?",
+        "cta-text": "Kontaktieren Sie uns noch heute und erhalten Sie eine kostenlose Beratung für Ihr Auto",
+        "cta-btn-primary": "Beratung erhalten",
+        "cta-btn-phone": "Jetzt anrufen",
         
         // Contact
         "contact-title": "Kontaktieren Sie uns",
@@ -280,8 +322,11 @@ const translations = {
         "address-text": "Hohlstraße 43, 55743 Idar-Oberstein",
         "phone-title": "Telefon",
         "email-title": "E-Mail",
+        "email-text": "gtautomobile2024@gmail.com",
         "hours-title": "Öffnungszeiten",
         "hours-text": "Mo-Fr: 9:00 - 17:00<br>Sa: 9:00 - 15:00<br>So: geschlossen",
+        "social-title": "Wir in sozialen Medien",
+        "contact-modal-title": "Kontaktieren Sie uns",
         
         // Form
         "form-name": "Ihr Name",
@@ -302,9 +347,9 @@ const translations = {
         "footer-about": "Professionelle Autowerkstatt und Autoverkauf. Wir garantieren Qualität, Zuverlässigkeit und individuelle Betreuung für jeden Kunden. Über 13 Jahre Erfahrung im Automobilservice.",
         "footer-services-title": "Unsere Dienstleistungen",
         "footer-service1": "Wartung",
-        "footer-service2": "Motorreparatur",
-        "footer-service3": "Karosseriereparatur",
-        "footer-service4": "Elektrik und Elektronik",
+        "footer-service2": "Smart Repair",
+        "footer-service3": "Reifenwechsel",
+        "footer-service4": "Aufbereitung",
         "footer-service5": "Autoverkauf",
         "footer-contact-title": "Kontakte",
         "footer-address": "Hohlstraße 43, 55743 Idar-Oberstein",
@@ -312,54 +357,8 @@ const translations = {
         "footer-rights": "Alle Rechte vorbehalten.",
         
         // Loading
-        "loading-text": "Laden...",
-
-        "faq": "FAQ",
-        
-        // Hero новые
-        "hero-feature1": "Qualitätsgarantie",
-        "hero-feature2": "Schneller Service", 
-        "hero-feature3": "Erschwingliche Preise",
-        "hero-badge-text": "Beste Autowerkstatt 2024",
-        "contact-btn": "Kostenlose Beratung",
-        
-        // Process
-        "process-title": "So arbeiten wir",
-        "process-subtitle": "Transparenter Arbeitsprozess von der Anfrage bis zum Ergebnis",
-        "process-step1-title": "Beratung",
-        "process-step1-text": "Sie stellen eine Anfrage, wir kontaktieren Sie und klären die Details",
-        "process-step2-title": "Diagnose", 
-        "process-step2-text": "Wir führen eine vollständige Diagnose durch und erstellen einen Kostenvoranschlag",
-        "process-step3-title": "Reparatur",
-        "process-step3-text": "Wir führen Arbeiten mit hochwertigen Ersatzteilen durch",
-        "process-step4-title": "Ergebnis",
-        "process-step4-text": "Sie erhalten ein fertiges Ergebnis mit Qualitätsgarantie",
-        
-        // About
-        "experience-text": "Jahre erfolgreiche Arbeit",
-        
-        // FAQ
-        "faq-title": "Häufig gestellte Fragen",
-        "faq-subtitle": "Antworten auf die häufigsten Fragen zu unseren Dienstleistungen",
-        "faq1-question": "Wie schnell können Sie mein Auto reparieren?",
-        "faq1-answer": "Die Reparaturzeiten hängen von der Komplexität der Arbeiten ab. Normalerweise dauert die Diagnose 1-2 Stunden, kleine Reparaturen 1-2 Tage, Generalüberholungen 3-7 Tage. Wir versuchen immer, die Standzeit Ihres Fahrzeugs zu minimieren.",
-        "faq2-question": "Wie schnell kann ich einen Termin bekommen?",
-"faq2-answer": "Wir bieten Termine schnell an – in der Regel innerhalb einer Woche. Kontaktieren Sie uns, und wir finden den nächstmöglichen, passenden Termin für Sie.",        
-        "faq3-question": "Können Sie beim Autokauf in Deutschland helfen?",
-        "faq3-answer": "Natürlich! Wir bieten vollständige Begleitung beim Autokauf: Auswahl von Optionen, Überprüfung der Historie, technische Diagnose, Bearbeitung von Dokumenten und Hilfe bei der Zulassung.",
-        "faq4-question": "Arbeiten Sie mit bestimmten Automarken?",
-        "faq4-answer": "Wir arbeiten mit allen Automarken: von Volkswagen, BMW, Mercedes bis Audi, Opel, Ford und anderen. Unsere Spezialisten haben Erfahrung mit verschiedenen Marken.",
-        
-        // CTA
-        "cta-title": "Bereit für die Zusammenarbeit?",
-        "cta-text": "Kontaktieren Sie uns noch heute und erhalten Sie eine kostenlose Beratung für Ihr Auto",
-        "cta-btn-primary": "Beratung erhalten",
-        "cta-btn-phone": "Jetzt anrufen",
-        
-        // Contact
-        "social-title": "Wir in sozialen Medien",
-        "contact-modal-title": "Kontaktieren Sie uns"
-    },    
+        "loading-text": "Laden..."
+    },
     uk: {
         // Header
         "home": "Головна",
@@ -369,12 +368,18 @@ const translations = {
         "testimonials": "Відгуки",
         "contact": "Контакти",
         "current-lang": "Українська",
+        "faq": "Питання",
         
         // Hero
         "hero-title": "Професійний <span>автосервіс</span> та продаж автомобілів",
         "hero-text": "Torop Auto пропонує повний спектр послуг з обслуговування, ремонту та продажу автомобілів. Ми гарантуємо якість, надійність та індивідуальний підхід до кожного клієнта.",
         "services-btn": "Наші послуги",
         "cars-btn": "Автомобілі в наявності",
+        "hero-feature1": "Гарантія якості",
+        "hero-feature2": "Швидке обслуговування", 
+        "hero-feature3": "Доступні ціни",
+        "hero-badge-text": "Найкращий автосервіс 2024",
+        "contact-btn": "Безкоштовна консультація",
         
         // Stats
         "stat1": "Автомобілів продано",
@@ -386,17 +391,17 @@ const translations = {
         "services-title": "Наші послуги",
         "services-subtitle": "Ми пропонуємо широкий спектр послуг для вашого автомобіля, використовуючи сучасне обладнання та передові технології",
         "service1-title": "Технічне обслуговування",
-        "service1-text": "Регулярне технічне обслуговування для підтримки вашого автомобіля в ідеальному стані.",
-        "service2-title": "Ремонт двигуна",
-        "service2-text": "Діагностика та ремонт двигунів будь-якої складності з використанням сучасного обладнання. Капітальний ремонт, заміна компонентів.",
-        "service3-title": "Кузовний ремонт",
-        "service3-text": "Якісний кузовний ремонт та фарбування з гарантією довговічності та збереження зовнішнього вигляду. Рихтування, шпаклівка, антикорозійна обробка.",
-        "service4-title": "Електрика та електроніка",
-        "service4-text": "Діагностика та ремонт електричних систем, бортових комп'ютерів та електронних компонентів. Встановлення додаткового обладнання.",
-        "service5-title": "Ремонт трансмісії",
-        "service5-text": "Професійний ремонт автоматичних та механічних коробок передач. Заміна зчеплення, ремонт диференціалів, обслуговування КПП.",
-        "service6-title": "Діагностика та ТО",
-        "service6-text": "Комплексна комп'ютерна діагностика всіх систем автомобіля. Регулярне технічне обслуговування за регламентом виробника.",
+        "service1-text": "Регулярне технічне обслуговування для підтримки вашого автомобіля в ідеальному стані. Заміна масла, фільтрів, діагностика систем.",
+        "service2-title": "Smart Repair",
+        "service2-text": "Швидкий та якісний ремонт дрібних пошкоджень кузова без необхідності повного фарбування. Усунення подряпин, сколів, вм'ятин.",
+        "service3-title": "Шиномонтаж та продаж шин",
+        "service3-text": "Професійний шиномонтаж, балансування коліс та продаж якісних шин від провідних виробників. Сезонна заміна резини.",
+        "service4-title": "Автообробка (Aufbereitung)",
+        "service4-text": "Комплексна обробка кузова та салону для відновлення зовнішнього вигляду автомобіля. Полірування, захисне покриття, хімчистка.",
+        "service5-title": "Продаж запчастин",
+        "service5-text": "Повний асортимент оригінальних деталей та надійних аналогових рішень",
+        "service6-title": "Послуги з реєстрації",
+        "service6-text": "Повний супровід реєстрації автомобіля, отримання експортних номерів, допомога з документами та страховкою.",
         "service-link": "Детальніше",
         
         // About
@@ -407,8 +412,9 @@ const translations = {
         "feature2": "Сучасне діагностичне обладнання",
         "feature3": "Досвідчені та сертифіковані фахівці",
         "feature4": "Доступні ціни та гнучка система знижок",
-        "feature5": "Широкий вибір оригінальних запчастин",
+        "feature5": "Повний асортимент оригінальних деталей та надійних аналогових рішень",
         "feature6": "Зручне розташування та парковка",
+        "experience-text": "років успішної роботи",
         
         // Cars
         "cars-title": "Автомобілі в наявності",
@@ -424,6 +430,12 @@ const translations = {
         "seats": "Місця",
         "car-btn": "Дізнатися більше",
         
+        // Additional Services
+        "service7-title": "Автопідбір під замовлення",
+        "service7-text": "Індивідуальний підбір автомобіля за вашими параметрами та вимогами. Пошук найкращих варіантів на ринку з повною перевіркою історії та стану.",
+        "service8-title": "Автомобілі з аукціонів",
+        "service8-text": "Покупка автомобілів з німецьких аукціонів з економією до 30%. Повний супровід угоди, перевірка та гарантія якості.",
+        
         // Platforms
         "platforms-title": "Більше автомобілів на популярних майданчиках",
         "platforms-subtitle": "Шукаєте більше варіантів? Перегляньте наші пропозиції на провідних автомобільних майданчиках",
@@ -435,6 +447,18 @@ const translations = {
         "modal-text": "Наразі сторінка на mobile.de знаходиться в розробці. Незабаром тут з'являться наші автомобілі!",
         "modal-close": "Закрити",
         
+        // Process
+        "process-title": "Як ми працюємо",
+        "process-subtitle": "Прозорий процес роботи від заявки до результату",
+        "process-step1-title": "Консультація",
+        "process-step1-text": "Ви залишаєте заявку, ми зв'язуємося з вами та уточнюємо деталі",
+        "process-step2-title": "Діагностика", 
+        "process-step2-text": "Проводимо повну діагностику та складаємо кошторис",
+        "process-step3-title": "Ремонт",
+        "process-step3-text": "Виконуємо роботи з використанням якісних запчастин",
+        "process-step4-title": "Результат",
+        "process-step4-text": "Ви отримуєте готовий результат з гарантією якості",
+        
         // Testimonials
         "testimonials-title": "Відгуки клієнтів",
         "testimonials-subtitle": "Що кажуть наші клієнти про якість наших послуг",
@@ -443,6 +467,24 @@ const translations = {
         "testimonial3-text": "Супер 👍🏻 дуже мило, відмінний сервіс",
         "view-on-maps": "Дивитися на Картах",
         "month-ago": "місяць тому",
+        
+        // FAQ
+        "faq-title": "Часті запитання",
+        "faq-subtitle": "Відповіді на найпопулярніші питання про наші послуги",
+        "faq1-question": "Як швидко ви можете відремонтувати мій автомобіль?",
+        "faq1-answer": "Терміни ремонту залежать від складності робіт. Зазвичай діагностика займає 1-2 години, дрібний ремонт - 1-2 дні, капітальний ремонт - 3-7 днів. Ми завжди намагаємося мінімізувати час простою вашого автомобіля.",
+        "faq2-question": "Як швидко можна отримати сервісний термін?",
+        "faq2-answer": "Ми надаємо термін швидко — зазвичай протягом тижня. Зв'яжіться з нами, і ми підберемо для вас найближчий зручний час.",        
+        "faq3-question": "Чи можете ви допомогти з покупкою автомобіля в Німеччині?",
+        "faq3-answer": "Звичайно! Ми пропонуємо повний супровід при покупці автомобіля: підбір варіантів, перевірка історії, технічна діагностика, оформлення документів та допомога з реєстрацією.",
+        "faq4-question": "Чи працюєте ви з конкретними марками автомобілів?",
+        "faq4-answer": "Ми працюємо з усіма марками автомобілів: від Volkswagen, BMW, Mercedes до Audi, Opel, Ford та інших. Наші фахівці мають досвід роботи з різними брендами.",
+        
+        // CTA
+        "cta-title": "Готові почати співпрацю?",
+        "cta-text": "Зв'яжіться з нами сьогодні та отримайте безкоштовну консультацію щодо вашого автомобіля",
+        "cta-btn-primary": "Отримати консультацію",
+        "cta-btn-phone": "Зателефонувати зараз",
         
         // Contact
         "contact-title": "Зв'яжіться з нами",
@@ -453,8 +495,11 @@ const translations = {
         "address-text": "Hohlstraße 43, 55743 Idar-Oberstein",
         "phone-title": "Телефон",
         "email-title": "Email",
+        "email-text": "gtautomobile2024@gmail.com",
         "hours-title": "Години роботи",
         "hours-text": "Пн-Пт: 9:00 - 17:00<br>Сб: 9:00 - 15:00<br>Нд: вихідний",
+        "social-title": "Ми в соцмережах",
+        "contact-modal-title": "Зв'яжіться з нами",
         
         // Form
         "form-name": "Ваше ім'я",
@@ -475,9 +520,9 @@ const translations = {
         "footer-about": "Професійний автосервіс та продаж автомобілів. Ми гарантуємо якість, надійність та індивідуальний підхід до кожного клієнта. Понад 13 років на ринку автомобільних послуг.",
         "footer-services-title": "Наші послуги",
         "footer-service1": "Технічне обслуговування",
-        "footer-service2": "Ремонт двигуна",
-        "footer-service3": "Кузовний ремонт",
-        "footer-service4": "Електрика та електроніка",
+        "footer-service2": "Smart Repair",
+        "footer-service3": "Шиномонтаж та шини",
+        "footer-service4": "Автообробка",
         "footer-service5": "Продаж автомобілів",
         "footer-contact-title": "Контакти",
         "footer-address": "Hohlstraße 43, 55743 Idar-Oberstein",
@@ -485,55 +530,9 @@ const translations = {
         "footer-rights": "Всі права захищені.",
         
         // Loading
-        "loading-text": "Завантаження...",
-
-         "faq": "Питання",
-        
-        // Hero новые 
-        "hero-feature1": "Гарантія якості",
-        "hero-feature2": "Швидке обслуговування", 
-        "hero-feature3": "Доступні ціни",
-        "hero-badge-text": "Найкращий автосервіс 2024",
-        "contact-btn": "Безкоштовна консультація",
-        
-        // Process
-        "process-title": "Як ми працюємо",
-        "process-subtitle": "Прозорий процес роботи від заявки до результату",
-        "process-step1-title": "Консультація",
-        "process-step1-text": "Ви залишаєте заявку, ми зв'язуємося з вами та уточнюємо деталі",
-        "process-step2-title": "Діагностика", 
-        "process-step2-text": "Проводимо повну діагностику та складаємо кошторис",
-        "process-step3-title": "Ремонт",
-        "process-step3-text": "Виконуємо роботи з використанням якісних запчастин",
-        "process-step4-title": "Результат",
-        "process-step4-text": "Ви отримуєте готовий результат з гарантією якості",
-        
-        // About
-        "experience-text": "років успішної роботи",
-        
-        // FAQ
-        "faq-title": "Часті запитання",
-        "faq-subtitle": "Відповіді на найпопулярніші питання про наші послуги",
-        "faq1-question": "Як швидко ви можете відремонтувати мій автомобіль?",
-        "faq1-answer": "Терміни ремонту залежать від складності робіт. Зазвичай діагностика займає 1-2 години, дрібний ремонт - 1-2 дні, капітальний ремонт - 3-7 днів. Ми завжди намагаємося мінімізувати час простою вашого автомобіля.",
-        "faq2-question": "Як швидко можна отримати сервісний термін?",
-"faq2-answer": "Ми надаємо термін швидко — зазвичай протягом тижня. Зв'яжіться з нами, і ми підберемо для вас найближчий зручний час.",        
-        "faq3-question": "Чи можете ви допомогти з покупкою автомобіля в Німеччині?",
-        "faq3-answer": "Звичайно! Ми пропонуємо повний супровід при покупці автомобіля: підбір варіантів, перевірка історії, технічна діагностика, оформлення документів та допомога з реєстрацією.",
-        "faq4-question": "Чи працюєте ви з конкретними марками автомобілів?",
-        "faq4-answer": "Ми працюємо з усіма марками автомобілів: від Volkswagen, BMW, Mercedes до Audi, Opel, Ford та інших. Наші фахівці мають досвід роботи з різними брендами.",
-        
-        // CTA
-        "cta-title": "Готові почати співпрацю?",
-        "cta-text": "Зв'яжіться з нами сьогодні та отримайте безкоштовну консультацію щодо вашого автомобіля",
-        "cta-btn-primary": "Отримати консультацію",
-        "cta-btn-phone": "Зателефонувати зараз",
-        
-        // Contact
-        "social-title": "Ми в соцмережах",
-        "contact-modal-title": "Зв'яжіться з нами"
-    }    
-};    
+        "loading-text": "Завантаження..."
+    }
+};   
 
 
 
@@ -643,7 +642,7 @@ const appData = {
         {
             icon: 'bx bx-envelope',
             titleKey: 'email-title',
-            text: 'info@toropauto.de'
+            text: 'gtautomobile2024@gmail.com'
         },
         {
             icon: 'bx bx-time',
@@ -667,7 +666,7 @@ const appData = {
             links: [
                 { icon: 'bx bx-map', textKey: 'footer-address' },
                 { icon: 'bx bx-phone', text: '+49 151 46327 317' },
-                { icon: 'bx bx-envelope', text: 'info@toropauto.de' },
+                { icon: 'bx bx-envelope', text: 'gtautomobile2024@gmail.com' },
                 { icon: 'bx bx-time', textKey: 'footer-hours' }
             ]
         }
@@ -784,7 +783,7 @@ function renderDynamicContent() {
                 </div>
                 <div class="testimonial-author">
                     <div class="author-avatar">
-                        <img src="${testimonial.avatar}" alt="${testimonial.name}" loading="lazy">
+                        <img src="./images/human.png" alt="${testimonial.name}" loading="lazy">
                     </div>
                     <div class="author-info">
                         <h4>${testimonial.name}</h4>
