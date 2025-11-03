@@ -1,6 +1,6 @@
 // Telegram Bot Configuration
 const TELEGRAM_BOT_TOKEN = '8441410287:AAHlLS0A8-goraOCZPxl3D00QjQItDsLDRE';
-const TELEGRAM_CHAT_ID = '8326460941';
+const TELEGRAM_CHAT_ID = '6955409089';
 
 // Initialize AOS
 AOS.init({
