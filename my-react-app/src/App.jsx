@@ -1,33 +1,26 @@
-import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import HomePage from './pages/HomePage/HomePage';
+import CarsPage from './pages/CarsPage/CarsPage';
+import CarDetailsPage from './pages/CarDetailsPage/CarDetailsPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <div style={{ 
-        padding: '50px', 
-        textAlign: 'center', 
-        background: '#000', 
-        color: '#fff',
-        minHeight: '100vh'
-      }}>
-        <h1>Torop Auto работает! 🚗</h1>
-        <p>Если вы видите этот текст, значит React работает корректно.</p>
-        <button 
-          style={{
-            background: '#4cc0e7',
-            color: 'white',
-            padding: '10px 20px',
-            border: 'none',
-            borderRadius: '5px',
-            marginTop: '20px'
-          }}
-          onClick={() => alert('React работает!')}
-        >
-          Тестовая кнопка
-        </button>
+    <BrowserRouter>
+      <div className="app-shell">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/cars" element={<CarsPage />} />
+          <Route path="/cars/:id" element={<CarDetailsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+        <Footer />
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

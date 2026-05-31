@@ -1,70 +1,32 @@
-import React from 'react';
-import { useLanguage } from '../../hooks/useLanguage';
-import { appData } from '../../data/appData';
-import '../../styles/global';
+import { Link } from 'react-router-dom';
 
-const Footer = () => {
-  const { t } = useLanguage();
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+function Footer() {
   return (
-    <footer>
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-column">
-            <h3>Torop Auto</h3>
-            <p>{t('footer-about')}</p>
-            <div className="social-links">
-              <a href="#" aria-label="Facebook">
-                <i className='bx bxl-facebook'></i>
-              </a>
-              <a href="#" aria-label="Instagram">
-                <i className='bx bxl-instagram'></i>
-              </a>
-              <a href="#" aria-label="Twitter">
-                <i className='bx bxl-twitter'></i>
-              </a>
-            </div>
-          </div>
-          {appData.footerLinks.map((column, index) => (
-            <div key={index} className="footer-column">
-              <h3>{t(column.titleKey)}</h3>
-              <ul className="footer-links">
-                {column.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a 
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        if (column.titleKey === 'footer-services-title') {
-                          scrollToSection('services');
-                        } else if (column.titleKey === 'footer-contact-title') {
-                          scrollToSection('contact');
-                        }
-                      }}
-                    >
-                      {link.icon && <i className={link.icon}></i>}
-                      {!link.icon && <i className="bx bx-chevron-right"></i>}
-                      <span>{link.textKey ? t(link.textKey) : link.text}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+    <footer className="site-footer">
+      <div className="container footer__grid">
+        <div>
+          <Link className="brand" to="/" aria-label="Torop Auto home">
+            <span className="brand__mark">TA</span>
+            <span className="brand__text">Torop <strong>Auto</strong></span>
+          </Link>
+          <p className="footer__text">Премиальный подбор, проверка и продажа автомобилей в Германии с прозрачной историей.</p>
         </div>
-        <div className="footer-bottom">
-          <p>&copy; 2024 Torop Auto. <span>{t('footer-rights')}</span></p>
+        <div>
+          <h3>Навигация</h3>
+          <Link to="/cars">Автомобили</Link>
+          <a href="/#services">Услуги</a>
+          <a href="/#contacts">Контакты</a>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <a href="tel:+4915146327317">+49 151 46327 317</a>
+          <a href="mailto:info@toropauto.de">info@toropauto.de</a>
+          <a href="https://t.me/toropauto">Telegram</a>
         </div>
       </div>
+      <div className="container footer__bottom">© 2026 Torop Auto. Все права защищены.</div>
     </footer>
   );
-};
+}
 
 export default Footer;

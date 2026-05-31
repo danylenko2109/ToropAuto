@@ -1,16 +1,70 @@
-# React + Vite
+# Torop Auto — React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современный интерфейс автосалона/сервиса Torop Auto: каталог автомобилей, отдельные страницы машин, галерея фотографий и подготовленный слой данных для будущей интеграции с Telegram-ботом.
 
-Currently, two official plugins are available:
+## Запуск проекта
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Проверки перед релизом:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run lint
+npm run build
+```
 
-## Expanding the ESLint configuration
+## Маршруты
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `/` — главная страница с hero-блоком, преимуществами, услугами, отзывами и CTA.
+- `/cars` — каталог автомобилей.
+- `/cars/:id` — отдельная страница автомобиля с галереей, характеристиками, описанием, опциями и CTA.
+
+## Структура фронтенда
+
+```text
+src/
+  components/
+    Header/
+    Footer/
+    CarCard/
+    CarGallery/
+    CarSpecs/
+    ContactCTA/
+  pages/
+    HomePage/
+    CarsPage/
+    CarDetailsPage/
+    NotFoundPage/
+  data/
+    cars.js
+    appData.js
+  services/
+    carsApi.js
+```
+
+## Данные автомобилей
+
+Основная mock-структура находится в `src/data/cars.js`. Каждый автомобиль хранит массив `images`, полные характеристики, описание, комплектацию, дату создания и источник данных.
+
+Фронтенд не должен читать данные напрямую из Telegram-бота. Компоненты получают автомобили через `src/services/carsApi.js`, чтобы позже заменить mock-данные на backend API без переписывания UI.
+
+## Будущая интеграция Telegram-бота
+
+Планируемый поток данных:
+
+1. Пользователь добавляет автомобиль через Telegram-бота.
+2. Бот отправляет текстовые данные и фотографии на backend.
+3. Backend сохраняет характеристики в базе данных, а фотографии — как файлы или URL в хранилище.
+4. Сайт получает автомобили через frontend API, например `GET /api/cars` и `GET /api/cars/:id`.
+5. У каждой машины автоматически появляется карточка в каталоге и отдельная страница `/cars/:id`.
+
+Точка подключения backend находится в `src/services/carsApi.js` — там оставлен TODO для замены локального массива на реальные endpoints.
+
+## Важные UX-детали
+
+- Если у автомобиля нет фотографий, показывается SVG-placeholder.
+- Карточки и страницы используют semantic HTML, alt-тексты и доступные CTA.
+- Интерфейс адаптирован под mobile/tablet/desktop.
