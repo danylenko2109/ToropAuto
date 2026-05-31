@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
     <title>Torop Auto - Профессиональный автосервис и продажа автомобилей в Германии</title>
-    <meta name="description" content="Torop Auto - профессиональный автосервис, ремонт и продажа автомобилей в Германии. Качественные услуги, гарантия, немецкое качество.">
-    <meta name="keywords" content="автосервис Германия, продажа автомобилей, ремонт авто, кузовной ремонт, техобслуживание, Torop Auto">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <meta name="description" content="Torop Auto - автосервис и продажа автомобилей в Idar-Oberstein. Ремонт, обслуживание, диагностика, купля-продажа авто. Немецкое качество, русскоязычный сервис.">
+    <meta name="keywords" content="автосервис Германия, продажа автомобилей, ремонт авто, купить авто Германия, Idar-Oberstein, Torop Auto, автосервис русский">
+    <meta name="author" content="Torop Auto">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toropauto.de/">
+    <meta property="og:title" content="Torop Auto - Профессиональный автосервис и продажа автомобилей">
+    <meta property="og:description" content="Автосервис и продажа автомобилей в Германии. Качественный ремонт, обслуживание, диагностика. Русскоязычный сервис в Idar-Oberstein.">
+    <!-- <meta property="og:image" content="%PUBLIC_URL%/images/logo.png"> -->
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://toropauto.de/">
+    <meta property="twitter:title" content="Torop Auto - Автосервис и продажа автомобилей">
+    <meta property="twitter:description" content="Профессиональный автосервис и продажа автомобилей в Германии">
+    <!-- <meta property="twitter:image" content="%PUBLIC_URL%/images/logo.png"> -->
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://toropauto.de/" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/logo.png">
-    <!-- Structured Data for SEO -->
+    
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "AutoRepair",
         "name": "Torop Auto",
         "description": "Профессиональный автосервис и продажа автомобилей в Германии",
+        "url": "https://toropauto.de",
+        "telephone": "+4915146327317",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Hohlstraße 43",
@@ -24,500 +51,24 @@
             "postalCode": "55743",
             "addressCountry": "DE"
         },
-        "telephone": "+4915146327317",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 49.7082,
+            "longitude": 7.3280
+        },
         "openingHours": [
-            "Mo-Fr 09:00-17:00",
-            "Sa 10:00-15:00"
+            "Mo-Fr 09:00-19:00",
+            "Sa 10:00-17:00"
         ],
-        "url": "https://toropauto.de"
+        "priceRange": "€€",
+        "areaServed": "Idar-Oberstein и surrounding areas"
     }
     </script>
+  <script type="module" crossorigin src="./assets/index-DFkEqf4L.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BkcQAOa_.css">
 </head>
 <body>
-
-
-    
-    <!-- Scroll to Top Button -->
-    <div class="scroll-to-top">
-        <i class='bx bx-chevron-up'></i>
-    </div>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-content">
-            <span class="lightbox-close" id="lightboxClose">
-                <i class='bx bx-x'></i>
-            </span>
-            <img id="lightboxImage" src="" alt="">
-            <div class="lightbox-nav">
-                <div class="lightbox-prev" id="lightboxPrev">
-                    <i class='bx bx-chevron-left'></i>
-                </div>
-                <div class="lightbox-next" id="lightboxNext">
-                    <i class='bx bx-chevron-right'></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile.de Modal -->
-    <div class="modal" id="mobileModal">
-        <div class="modal-content">
-            <span class="modal-close" id="mobileModalClose">
-                <i class='bx bx-x'></i>
-            </span>
-            <div class="modal-icon">
-                <i class='bx bx-time'></i>
-            </div>
-            <h3 data-lang="modal-title">Скоро будет доступно</h3>
-            <p data-lang="modal-text">В настоящее время страница на mobile.de находится в разработке. Скоро здесь появятся наши автомобили!</p>
-            <button class="btn btn-primary" id="modalCloseBtn" data-lang="modal-close">Закрыть</button>
-        </div>
-    </div>
-
-    <!-- Contact Modal -->
-    <div class="modal" id="contactModal">
-        <div class="modal-content">
-            <span class="modal-close" id="contactModalClose">
-                <i class='bx bx-x'></i>
-            </span>
-            <div class="modal-icon">
-                <i class='bx bx-phone'></i>
-            </div>
-            <h3 data-lang="contact-modal-title">Свяжитесь с нами</h3>
-            <div class="contact-modal-buttons">
-                <a href="tel:+4915146327317" class="btn btn-primary">
-                    <i class='bx bx-phone'></i>
-                    Позвонить
-                </a>
-                <a href="https://wa.me/4915146327317" class="btn btn-success" target="_blank">
-                    <i class='bx bxl-whatsapp'></i>
-                    WhatsApp
-                </a>
-                <a href="https://t.me/toropauto" class="btn btn-telegram" target="_blank">
-                    <i class='bx bxl-telegram'></i>
-                    Telegram
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <!-- Header -->
-        <header data-aos="fade-down" data-aos-duration="1000">
-            <div class="logo">
-                <img src="images/logo.png" alt="Torop Auto" width="50px">
-                <h2>Torop <span>Auto</span></h2>
-            </div>
-            
-            <div class="nav-container">
-                <nav>
-                    <ul id="navMenu">
-                        <li><a href="#home" data-lang="home">Главная</a></li>
-                        <li><a href="#services" data-lang="services">Услуги</a></li>
-                        <li><a href="#about" data-lang="about">О нас</a></li>
-                        <li><a href="#cars" data-lang="cars">Автомобили</a></li>
-                        <li><a href="#testimonials" data-lang="testimonials">Отзывы</a></li>
-                        <li><a href="#faq" data-lang="faq">Вопросы</a></li>
-                        <li><a href="#contact" data-lang="contact">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-            
-            <div class="language-switcher">
-                <button class="language-btn">
-                    <i class='bx bx-globe'></i>
-                    <span data-lang="current-lang">Русский</span>
-                    <i class='bx bx-chevron-down'></i>
-                </button>
-                <div class="language-dropdown">
-                    <div class="language-option active" data-lang="ru">
-                        <i class='bx bx-check'></i>
-                        <span>Русский</span>
-                    </div>
-                    <div class="language-option" data-lang="de">
-                        <i class='bx bx-check'></i>
-                        <span>Deutsch</span>
-                    </div>
-                    <div class="language-option" data-lang="uk">
-                        <i class='bx bx-check'></i>
-                        <span>Українська</span>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="menu-icon">
-                <i class='bx bx-menu'></i>
-            </button>
-        </header>
-
-        <!-- Hero Section -->
-        <section class="hero" id="home" data-aos="fade-up" data-aos-duration="1000">
-            <div class="hero-content">
-                <h1 data-lang="hero-title">Профессиональный <span>автосервис</span> и продажа автомобилей</h1>
-                <p data-lang="hero-text">Torop Auto предлагает полный спектр услуг по обслуживанию, ремонту и продаже автомобилей. Мы гарантируем качество, надежность и индивидуальный подход к каждому клиенту.</p>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary" data-lang="services-btn">Наши услуги</a>
-                    <a href="#cars" class="btn btn-outline" data-lang="cars-btn">Автомобили в наличии</a>
-                    <!-- <a href="#contact" class="btn btn-secondary" data-lang="contact-btn">Бесплатная консультация</a> -->
-                </div>
-                <div class="hero-features">
-                    <div class="hero-feature">
-                        <i class='bx bx-check-shield'></i>
-                        <span data-lang="hero-feature1">Гарантия качества</span>
-                    </div>
-                    <div class="hero-feature">
-                        <i class='bx bx-time'></i>
-                        <span data-lang="hero-feature2">Быстрое обслуживание</span>
-                    </div>
-                    <div class="hero-feature">
-                        <i class='bx bx-euro'></i>
-                        <span data-lang="hero-feature3">Доступные цены</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="images/pic1.jpg" alt="Автомобиль Torop Auto" loading="lazy">
-              
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <!-- <section class="stats">
-            <div class="container">
-                <div class="stats-container">
-                    <div class="stat-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <div class="stat-icon">
-                            <i class='bx bxs-car'></i>
-                        </div>
-                        <div class="stat-number" data-count="10">0</div>
-                        <div class="stat-text" data-lang="stat1">Автомобилей продано</div>
-                    </div>
-                    <div class="stat-card" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">
-                        <div class="stat-icon">
-                            <i class='bx bxs-user-check'></i>
-                        </div>
-                        <div class="stat-number" data-count="50">0</div>
-                        <div class="stat-text" data-lang="stat2">Довольных клиентов</div>
-                    </div>
-                    <div class="stat-card" data-aos="fade-up" data-aos-duration="220" data-aos-delay="300">
-                        <div class="stat-icon">
-                            <i class='bx bxs-wrench'></i>
-                        </div>
-                        <div class="stat-number" data-count="70">0</div>
-                        <div class="stat-text" data-lang="stat3">Выполненных ремонтов</div>
-                    </div>
-                    <div class="stat-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="stat-icon">
-                            <i class='bx bxs-award'></i>
-                        </div>
-                        <div class="stat-number" data-count="13">0</div>
-                        <div class="stat-text" data-lang="stat4">Лет опыта</div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 data-lang="services-title">Наши услуги</h2>
-                    <p data-lang="services-subtitle">Мы предлагаем широкий спектр услуг для вашего автомобиля, используя современное оборудование и передовые технологии</p>
-                </div>
-                <div class="services-grid">
-                    <!-- Service cards will be populated by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section class="process">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 data-lang="process-title">Как мы работаем</h2>
-                    <p data-lang="process-subtitle">Прозрачный процесс работы от заявки до результата</p>
-                </div>
-                <div class="process-steps">
-                    <div class="process-step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <div class="step-number">01</div>
-                        <div class="step-icon">
-                            <i class='bx bx-message-rounded-dots'></i>
-                        </div>
-                        <h3 data-lang="process-step1-title">Консультация</h3>
-                        <p data-lang="process-step1-text">Вы оставляете заявку, мы связываемся с вами и уточняем детали</p>
-                    </div>
-                    <div class="process-step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="step-number">02</div>
-                        <div class="step-icon">
-                            <i class='bx bx-search-alt'></i>
-                        </div>
-                        <h3 data-lang="process-step2-title">Диагностика</h3>
-                        <p data-lang="process-step2-text">Проводим полную диагностику и составляем смету</p>
-                    </div>
-                    <div class="process-step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <div class="step-number">03</div>
-                        <div class="step-icon">
-                            <i class='bx bx-cog'></i>
-                        </div>
-                        <h3 data-lang="process-step3-title">Ремонт</h3>
-                        <p data-lang="process-step3-text">Выполняем работы с использованием качественных запчастей</p>
-                    </div>
-                    <div class="process-step" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="step-number">04</div>
-                        <div class="step-icon">
-                            <i class='bx bx-check-circle'></i>
-                        </div>
-                        <h3 data-lang="process-step4-title">Результат</h3>
-                        <p data-lang="process-step4-text">Вы получаете готовый результат с гарантией качества</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about" id="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="images/pic2.jpg" alt="О компании Torop Auto" loading="lazy">
-                        <div class="about-experience">
-                            <div class="experience-number">13+</div>
-                            <div class="experience-text" data-lang="experience-text">лет успешной работы</div>
-                        </div>
-                    </div>
-                    <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
-                        <h2 data-lang="about-title">О компании Torop Auto</h2>
-                        <p data-lang="about-text1">Torop Auto — компания по продаже автомобилей в Германии. Несмотря на то, что мы работаем на немецком рынке всего 2 года, наш опыт в автомобильной сфере насчитывает более 10 лет и берёт начало в Украине.</p>
-                        <p data-lang="about-text2">За это время мы успешно помогли сотням клиентов приобрести надёжные автомобили, полностью соответствующие их ожиданиям. Мы знаем, насколько важен честный подход, поэтому тщательно проверяем каждую машину перед продажей и сопровождаем клиента на всех этапах сделки.</p>
-                        <div class="features">
-                            <!-- Features will be populated by JavaScript -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Cars Section -->
-        <section class="cars" id="cars">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 data-lang="cars-title">Автомобили в наличии</h2>
-                    <p data-lang="cars-subtitle">Мы предлагаем широкий выбор качественных автомобилей с гарантией и полной проверкой</p>
-                </div>
-                <div class="cars-grid">
-                    <!-- Car cards will be populated by JavaScript -->
-                </div>
-                
-                
-                <!-- External Platforms Section -->
-                <div class="external-platforms" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 data-lang="platforms-title">Больше автомобилей на популярных площадках</h3>
-                    <p data-lang="platforms-subtitle">Ищете больше вариантов? Посмотрите наши предложения на ведущих автомобильных площадках</p>
-                    <div class="platform-buttons">
-                        <a href="https://www.kleinanzeigen.de/s-bestandsliste.html?userId=153012374" target="_blank" class="platform-btn">
-                            <img src="images/klein.svg" alt="Kleinanzeigen" width="150px" loading="lazy">
-                        </a>
-                        <a href="#" class="platform-btn" id="mobileBtn">
-                            <img src="images/mobile.svg" alt="mobile.de" width="150px" loading="lazy">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials" id="testimonials">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 data-lang="testimonials-title">Отзывы клиентов</h2>
-                    <p data-lang="testimonials-subtitle">Что говорят наши клиенты о качестве наших услуг</p>
-                </div>
-                <div class="testimonials-container">
-                    <!-- Testimonial cards will be populated by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq" id="faq">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 data-lang="faq-title">Часто задаваемые вопросы</h2>
-                    <p data-lang="faq-subtitle">Ответы на самые популярные вопросы о наших услугах</p>
-                </div>
-                <div class="faq-container">
-                    <div class="faq-item" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="faq-question">
-                            <h3 data-lang="faq1-question">Как быстро вы можете отремонтировать мой автомобиль?</h3>
-                            <i class='bx bx-chevron-down'></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-lang="faq1-answer">Сроки ремонта зависят от сложности работ. Обычно диагностика занимает 1-2 часа, мелкий ремонт - 1-2 дня, капитальный ремонт - 3-7 дней. Мы всегда стараемся минимизировать время простоя вашего автомобиля.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <div class="faq-question">
-                            <h3 data-lang="faq2-question">Даете ли вы гарантию на ремонт?</h3>
-                            <i class='bx bx-chevron-down'></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-lang="faq2-answer">Да, мы предоставляем гарантию на все виды работ и установленные запчасти. Гарантийный срок зависит от типа ремонта и составляет от 6 месяцев до 2 лет.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="faq-question">
-                            <h3 data-lang="faq3-question">Можете ли вы помочь с покупкой автомобиля в Германии?</h3>
-                            <i class='bx bx-chevron-down'></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-lang="faq3-answer">Конечно! Мы предлагаем полное сопровождение при покупке автомобиля: подбор вариантов, проверка истории, техническая диагностика, оформление документов и помощь с регистрацией.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <div class="faq-question">
-                            <h3 data-lang="faq4-question">Работаете ли вы с конкретными марками автомобилей?</h3>
-                            <i class='bx bx-chevron-down'></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-lang="faq4-answer">Мы работаем со всеми марками автомобилей: от Volkswagen, BMW, Mercedes до Audi, Opel, Ford и других. Наши специалисты имеют опыт работы с различными брендами.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 data-lang="cta-title">Готовы начать сотрудничество?</h2>
-                    <p data-lang="cta-text">Свяжитесь с нами сегодня и получите бесплатную консультацию по вашему автомобилю</p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary" data-lang="cta-btn-primary">Получить консультацию</a>
-                        <a href="tel:+4915146327317" class="btn btn-outline" id="contactHeaderBtn">
-                            <i class='bx bx-phone'></i>
-                            <span data-lang="cta-btn-phone">Позвонить сейчас</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 data-lang="contact-title">Свяжитесь с нами</h2>
-                    <p data-lang="contact-subtitle">Мы готовы ответить на все ваши вопросы и помочь с выбором</p>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
-                        <h2 data-lang="contact-info-title">Наши контакты</h2>
-                        <p data-lang="contact-info-text">Свяжитесь с нами любым удобным способом. Мы всегда рады помочь вам с выбором автомобиля или ремонтом вашего транспортного средства.</p>
-                        <div class="contact-details">
-                            <!-- Contact details will be populated by JavaScript -->
-                        </div>
-                        
-                    </div>
-                    <div class="contact-form" data-aos="fade-left" data-aos-duration="1000">
-                        <form id="contactForm">
-                            <!-- Form will be populated by JavaScript -->
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <!-- Footer content will be populated by JavaScript -->
-                </div>
-                <div class="footer-bottom">
-        <p>&copy; 2025 Torop Auto. Alle Rechte vorbehalten.</p>
-        <div class="legal-links">
-            <a href="#impressum" id="impressumLink">Impressum</a>
-            <a href="#datenschutz" id="datenschutzLink">Datenschutz</a>
-        </div>
-    </div>
-</div>
-</footer>
-<!-- Legal Modals -->
-<div class="modal" id="impressumModal">
-<div class="modal-content legal-modal">
-    <span class="modal-close" id="impressumClose">
-        <i class='bx bx-x'></i>
-    </span>
-    <h2>Impressum</h2>
-    <div class="legal-content">
-        <p><strong>Angaben gemäß § 5 TMG:</strong></p>
-        <p>
-            Torop Auto<br>
-            Hohlstraße 43<br>
-            55743 Idar-Oberstein<br>
-            Deutschland
-        </p>
-        <p>
-            <strong>Vertreten durch:</strong><br>
-           Anatolij Torop
-        </p>
-        <p>
-            <strong>Kontakt:</strong><br>
-            Telefon: +49 151 46327317<br>
-            E-Mail: gtautomobile2024@gmail.com
-        </p>
-        <p>
-            <strong>Verantwortlich für den Datenschutz:</strong><br>
-            <br>
-            E-Mail: gtautomobile2024@gmail.com
-        </p>
-    </div>
-</div>
-</div>
-
-<div class="modal" id="datenschutzModal">
-<div class="modal-content legal-modal">
-    <span class="modal-close" id="datenschutzClose">
-        <i class='bx bx-x'></i>
-    </span>
-    <h2>Datenschutzerklärung</h2>
-    <div class="legal-content">
-        <h3>1. Datenschutz auf einen Blick</h3>
-        <p><strong>Allgemeine Hinweise</strong></p>
-        <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unser Kontaktformular nutzen.</p>
-        
-        <h3>2. Datenerfassung auf dieser Website</h3>
-        <p><strong>Kontaktformular</strong></p>
-        <p>
-            Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben 
-            aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten 
-            zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. 
-            Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-        </p>
-        <p>
-            Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO.
-        </p>
-        
-        <h3>3. Telegram-Integration</h3>
-        <p>
-            Ihre Kontaktanfragen werden über den Telegram-Messenger an uns übermittelt. 
-            Dabei gelten die Datenschutzbestimmungen von Telegram.
-        </p>
-        
-        <h3>4. Speicherdauer</h3>
-        <p>
-            Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, 
-            bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen 
-            oder der Zweck für die Datenspeicherung entfällt.
-        </p>
-    </div>
-</div>
-</div>
-    </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="index.js"></script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
 </body>
 </html>

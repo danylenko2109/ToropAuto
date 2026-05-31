@@ -1,0 +1,13 @@
+{
+  "name": "torop-auto-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix my-react-app run dev -- --host 0.0.0.0",
+    "build": "npm --prefix my-react-app run build && rm -rf assets && cp -R my-react-app/dist/assets ./assets && cp my-react-app/dist/index.html ./index.html",
+    "lint": "npm --prefix my-react-app run lint",
+    "preview": "npm --prefix my-react-app run preview"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
